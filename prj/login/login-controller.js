@@ -1,15 +1,13 @@
-app.controller('loginCtrl', function($scope, activeUserService, $log, $location) {
+app.controller('loginCtrl', function ($scope, activeUserService, $log, $location) {
+
 
     $scope.invalidCredentails = false;
-    // $scope.showNavigation(false);
 
-    $scope.login = function() {
+    $scope.login = function () {
         // TODO: Here you should disable the login button until there is a response from the service
 
-        activeUserService.login($scope.email, $scope.pwd).then(function(successLogin) {
+        activeUserService.login($scope.email, $scope.pwd).then(function (successLogin) {
             if (successLogin) {
-                control.log("ok login");
-                // $scope.showNavigation(true);
                 $location.path("/main");
             } else {
                 // TODO: Missing hadleing of next try
@@ -17,27 +15,16 @@ app.controller('loginCtrl', function($scope, activeUserService, $log, $location)
             }
         })
     }
-});
 
 
-    $scope.out = function() {
-      $location.path("/");
+    $scope.logout = function () {
+        // TODO: Here you should disable the login button until there is a response from the service
+
+        $scope.invalidCredentails = true;
+        $location.path("/");
     }
- 
-// app.controller('loginCtrl', function($scope, activeUserService, $log, $location) {
 
-//     $scope.invalidCredentails = false;
 
-//     $scope.login = function() {
-//         // TODO: Here you should disable the login button until there is a response from the service
 
-//         activeUserService.login($scope.email, $scope.pwd).then(function(successLogin) {
-//             if (successLogin) {
-//                 $location.path("/cars");
-//             } else {
-//                 // TODO: Missing hadleing of next try
-//                 $scope.invalidCredentails = true;
-//             }
-//         })
-//     }
-// });
+
+});
