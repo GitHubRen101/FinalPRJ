@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<br>
+<br>
+<br>
+<br>
+<h3>Add movie</h3>
+<form>
+  <div class="form-row ">
+    <div class=" form-group col-md-6">
+      <div class=" form-group col-md-6">
+        <label for="InputLinktoMovie">Link to IMDB</label>
+        <input type="text" class="form-control" id=" InputLinktoMovie " placeholder="Movie Link" ng-model="link">
+      </div>
+
+      <label for="InputLinktoPicture">Link to picture</label>
+      <input type="text" class="form-control" id="InputLinktoPicture" placeholder="Picture Link" ng-model="piclink">
+    </div>
+
+    <label for="InputMovieName">Movie Name</label>
+    <input type="text" class="form-control" id="InputMovieName" placeholder="Movie name" ng-model="name">
+  </div>
+
+  <div class=" form-group col-md-6">
+    <label for="InputDirector"> Director</label>
+    <input type="text" class="form-control" id="InputDirector" placeholder="Director" ng-model="director">
+  </div>
+
+  <div class=" form-group col-md-6">
+    <label for="length">Length</label>
+    <input type="date" class="form-control" id="Length" placeholder="Length in min" ng-model="length">
+  </div>
+
+  <button type="button" class="btn btn-light" id="FormBtn" ng-click="addFormMovie(link, piclink, name, director, length)">Add Movie</button>
+</form>
+
+<br>
+<select class="form-control" ng-model="sortByIs">
+  <option value="None">-- Select --</option>
+  <option value="name">Name</option>
+  <option value="director">Director</option>
+  <option value="length">Length</option>
+</select>
+
+<hr>
+<div class="accordion__container">
+  <div class="accordion__tab col-sm-12 col-md-6 col-lg-4" data-ng-repeat="movie in movies | orderBy: sortByIs">
+    <div class="accordion__tab-title" ng-click="openTab($index)">{{movie.name}} </div>
+    <div class="accordion__tab-content" ng-show="isOpenTab($index)">
+      <div class="card ">
+        <img class="card-img-top" src="{{movie.piclink}}" alt="Movie image">
+        <div class="card-body">
+          <h5 class="card-title">
+            <a href="{{movie.link}}" target="_blank">{{movie.name}} </a>
+          </h5>
+          <p class="card-text">
+            <small class="text-muted">Movie Length: {{Math.floor(movie.length / 60) + " hr " + movie.length % 60 + " min "}} </small>
+            <small class="text-muted">Movie Length: {{movie.length | lengthFilter }}</small>
+          </p>
+          <p class="card-text">
+            <b>Director:</b> {{movie.director}}</p>
+          <p class="card-text">
+            <b>Actors:</b>
+          </p>
+          <div data-ng-repeat="actor in movie.actors">{{actor.name}}</div>
+          <p class="card-text">
+            <b>Tags:</b>
+          </p>
+          <div data-ng-repeat="tag in movie.tags">{{tag.name}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="#!main"> Back</a>

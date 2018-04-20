@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+      <form>
+        <div class="form-row ">
+          <div class=" form-group col-md-6">
+            <div class=" form-group col-md-6">
+              <label for="InputLinktoPicture">Link to picture</label>
+              <input type="text" class="form-control" id="InputLinktoPicture" placeholder="Link" ng-model="link">
+            </div>
+            <label for="InputFirstName">First Name</label>
+            <input type="text" class="form-control" id="InputFirstName" placeholder="First name" ng-model="firstName">
+          </div>
+          <div class=" form-group col-md-6">
+            <label for="InputLastName">Last Name</label>
+            <input type="text" class="form-control" id="InputLastName" placeholder="Last name" ng-model="lastName">
+          </div>
+          <div class=" form-group col-md-6">
+            <label for="birthDate">Birth date</label>
+            <input type="date" class="form-control" id="birthDate" placeholder="BirthDate" ng-model="birthDate">
+          </div>
+          <div class=" form-group col-md-6">
+            <label for="About">About</label>
+            <input type="text" class="form-control" id="About" placeholder="About" ng-model="about">
+          </div>
+        </div>
+        <div class=" form-group col-md-6">
+          <label for="pageLink">Page Link</label>
+          <input type="text" class="form-control" id="pageLink" placeholder="Page Link" ng-model="pageLink">
+        </div>
+        <button type="button" class="btn btn-light" id="FormBtn" ng-click="addActor(link, firstName, lastName, birthDate, about, pageLink )">Add Actor</button>
+      </form>
+      
+      <div class="container">
+    <h4>Looking for Actors</h4>
+    <form class="search-form">
+      <input type="text" class="form-control" placeholder="Search Actor" ng-model="queryText" ng-change="searchChange()">
+  <!--    <div class="search-results list-group" ng-show="searchResults.length > 0" >-->
+  <!--      <a href="#" class="list-group-item list-group-item-action" ng-repeat="result in searchResults" ng-click="addActor(result)">{{result.name}}</a>-->
+  <!--    </div>-->
+    </form>
+
+    <!--<div class="row">-->
+  <!--    <div class="col-md-3 my-3" ng-repeat="actor in favActors">-->
+  <!--      <my-actor></my-actor>-->
+  <!--    </div>-->
+    <!--</div>-->
+  </div>
+      
+<input ng-model="orderName">
+<hr>
+<select class="form-control" ng-model="sortBy">
+  <option value="None">-- Select --</option>
+  <option value="firstName">First Name</option>
+  <option value="lastName">Last Name</option>
+  <option value="birthDate">BirthDay</option>
+</select>
+<hr>
+<div class="row">
+  <div class="card-group">
+    <div class="col-sm-12 col-md-6 col-lg-4" data-ng-repeat="actor in actors  | filter: orderName | orderBy:sortBy">
+      <div class="card " ng-class="{bordered: actor === selectedActor}" ng-click="setSelected(actor)">
+        <img class="card-img-top" src="{{actor.link}}" alt="Actors image">
+        <div class="card-body">
+          <h5 class="card-title">
+                  <a href="{{actor.pageLink}}" target="_blank" >{{actor.firstName}} {{actor.lastName}} </a>
+                </h5>
+          <p class="card-text">{{actor.about}}</p>
+          <p class="card-text"><small class="text-muted">By IMDB</small></p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="#!main"> Back</a>
+</div>
+<hr>

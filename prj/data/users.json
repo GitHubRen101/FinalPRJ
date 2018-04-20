@@ -1,0 +1,16 @@
+[
+    {
+        "email": "nir@nir.com",
+        "password": "123123",
+        "fname": "Nir",
+        "lname": "Channes",
+        "level": 5
+    },
+    {
+        "email": "john@doe.com",
+        "password": "johnjohn",
+        "fname": "John",
+        "lname": "Doe",
+        "level": 1
+    }
+]

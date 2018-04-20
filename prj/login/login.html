@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<div class="container">
+    <h1>Login to Movies DB App</h1>
+    <div class="alert alert-danger" ng-show="invalidCredentails">
+            <strong>Error!</strong> Invalid email or password.
+    </div>
+    <form>
+        <div class="form-group">
+          <label for="email">Email address:</label>
+          <input type="email" class="form-control" id="email" ng-model="email">
+        </div>
+        <div class="form-group">
+          <label for="pwd">Password:</label>
+          <input type="password" class="form-control" id="pwd" ng-model="pwd">
+        </div>
+        <button type="submit" class="btn btn-primary" ng-click="login()">Login</button>
+        <a class="btn btn-primary " ng-href="#!/main" role="button">Main Forward</a>
+        <a class="btn btn-primary " ng-href="#!/home" role="button">I'm so out of here</a>
+      </form>
+</div>
+

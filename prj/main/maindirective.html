@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<!--Main Display-->
+<div class="container" id="MainDisplay">
+    
+      <div class="jumbotron">
+         
+        <h1 class="text-center">Prof Dashboard</h1>
+   
+        <p>{{ clock | date:'HH:mm:ss'}}</p>
+        <p>{{ clock | date:'medium'}}</p>
+        
+        <div ng-controller='TimeCtrl'>
+          <p>{{ clock | date:'HH:mm:ss'}}</p>
+          <p>{{ clock | date:'medium'}}</p>
+        </div>
+        
+
+
+  <a class="btn btn-primary " ng-href="#!/actors" role="button">Best Actors</a>
+  <a class="btn btn-primary " ng-href="#!/movies" role="button">Best Movies</a>
+  
+  <a class="btn btn-primary btn-lg" ng-href="#!/login" role="button">Go for it!</a>
+  <a class="btn btn-primary btn-lg" ng-href="#!/main" role="button">Main Forward</a>
+  
+      </div>
+    </div>
+
