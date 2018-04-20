@@ -1,0 +1,94 @@
+[
+    {
+        "serialNum": 1,
+        "lectureTitle": "Fantasy creatures",
+        "lectureNum": "2",
+        "semester": "2018/2",
+        "lectureDate": "15.04.2018",
+        "about": "here goes lecture summary",
+        "course": {
+            "courseNum": "101509",
+            "courseSyllabus": "here goes course syllabus",
+            "univercity": {
+                "uniName": "Open Univercity",
+                "uniAddress": "Klausner 16 Tel Aviv"
+            }
+        },
+        "filmCuts": [
+            {
+                "filmName": "Harry Potter and the Prisoner of Azkaban",
+                "theme": "Fantasy creatures characters 1",
+                "start": {
+                    "hours": 1,
+                    "minutes": 21,
+                    "seconds": 33
+                },
+                "end": {
+                    "hours": 1,
+                    "minutes": 25,
+                    "seconds": 48
+                }
+            },
+            {
+                "filmName": "Harry Potter and the Prisoner of Azkaban",
+                "theme": "Fantasy creatures characters 2",
+                "start": {
+                    "hours": 1,
+                    "minutes": 31,
+                    "seconds": 35
+                },
+                "end": {
+                    "hours": 1,
+                    "minutes": 45,
+                    "seconds": 46
+                }
+            }
+        ]
+    },
+    {
+        "serialNum": 2,
+        "lectureTitle": "Fantasy TOM",
+        "lectureNum": "3",
+        "semester": "2018/2",
+        "lectureDate": "22.04.2018",
+        "about": "here goes lecture summary",
+        "course": {
+            "courseNum": "101509",
+            "courseSyllabus": "here goes course syllabus",
+            "univercity": {
+                "uniName": "Open Univercity",
+                "uniAddress": "Klausner 16 Tel Aviv"
+            }
+        },
+        "filmCuts": [
+            {
+                "filmName": "Harry Potter and the Deathly Hallows: Part 2",
+                "theme": "Fantasy creatures TOM 1",
+                "start": {
+                    "hours": 1,
+                    "minutes": 21,
+                    "seconds": 33
+                },
+                "end": {
+                    "hours": 1,
+                    "minutes": 25,
+                    "seconds": 48
+                }
+            },
+            {
+                "filmName": "Harry Potter and the Deathly Hallows: Part 2",
+                "theme": "Fantasy creatures TOM 2",
+                "start": {
+                    "hours": 1,
+                    "minutes": 31,
+                    "seconds": 35
+                },
+                "end": {
+                    "hours": 1,
+                    "minutes": 45,
+                    "seconds": 46
+                }
+            }
+        ]
+    }
+]

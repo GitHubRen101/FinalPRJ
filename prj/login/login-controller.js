@@ -20,6 +20,10 @@ app.controller('loginCtrl', function($scope, activeUserService, $log, $location)
 });
 
 
+    $scope.out = function() {
+      $location.path("/");
+    }
+ 
 // app.controller('loginCtrl', function($scope, activeUserService, $log, $location) {
 
 //     $scope.invalidCredentails = false;
