@@ -1,10 +1,10 @@
 
 
-  moviesApp.config(function($routeProvider) {
-    
-    $routeProvider
+moviesApp.config(function ($routeProvider) {
+
+  $routeProvider
     .when("/", {
-      templateUrl : "prj/home/home.html",
+      templateUrl: "prj/home/home.html",
       controller: 'homeCtrl'
     })
     // .when("/home", {
@@ -12,33 +12,37 @@
     //   controller: 'homeCtrl'
     // })
     .when("/", {
-      templateUrl : "prj/home/home.html"      
+      templateUrl: "prj/home/home.html"
     })
     // .when("/index", {
     //   templateUrl : "prj/home/home.html"
     // })
     .when("/login", {
-      templateUrl : "prj/login/login.html",
+      templateUrl: "prj/login/login.html",
       controller: 'loginCtrl'
     })
     .when("/main", {
-        templateUrl: "prj/main/maindirective.html",
-        controller: "mainCtrl"
-      })
+      templateUrl: "prj/main/maindirective.html",
+      controller: "mainCtrl"
+    })
     .when("/about", {
-         templateUrl: "prj/about/about.html",
-         controller: "aboutCtrl"
-       })
-       .when("/contact", {
-        templateUrl: "prj/contact/contact.html"        
-      })
+      templateUrl: "prj/about/about.html",
+      controller: "aboutCtrl"
+    })
+    .when("/contact", {
+      templateUrl: "prj/contact/contact.html"
+    })
     .when("/movies", {
-         templateUrl: "prj/movies/moviesdirective.html",
-         controller: "moviesListCtrl"
-       })
+      templateUrl: "prj/movies/moviesdirective.html",
+      controller: "moviesListCtrl"
+    })
+    .when("/lectures", {
+      templateUrl: "prj/lectures/lecturesdirective.html",
+      controller: "LecturesCtrl"
+    })
     .otherwise({
       redirectTo: "/"
     });
-  });
+});
 
 

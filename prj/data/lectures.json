@@ -8,6 +8,7 @@
         "about": "here goes lecture summary",
         "course": {
             "courseNum": "101509",
+            "courseName": "Fantastic Mind",
             "courseSyllabus": "here goes course syllabus",
             "univercity": {
                 "uniName": "Open Univercity",
@@ -54,6 +55,7 @@
         "about": "here goes lecture summary",
         "course": {
             "courseNum": "101509",
+            "courseName": "Fantastic Mind",
             "courseSyllabus": "here goes course syllabus",
             "univercity": {
                 "uniName": "Open Univercity",
