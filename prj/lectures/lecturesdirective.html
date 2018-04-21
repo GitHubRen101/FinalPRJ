@@ -5,25 +5,23 @@
 <br>
 <br>
 <div class="container">
-    <h1>
-        Lectures
-    </h1>
+    <h3>Lectures</h3>
     <div>
         <!-- <div>
             <label for="search">Filter:</label>
             <input type="text" id="search" ng-model="searchText">
         </div> -->
 
-        <table class="table">
-            <!-- <tr>
+        <!-- <table class="table">
+            <tr>
                 <th ng-click="changeSort('brand')">Brand</th>
                 <th ng-click="changeSort('model')">Model</th>
                 <th ng-click="changeSort('year')">Year</th>
                 <th ng-click="changeSort('km')">KM</th>
                 <th>Km/Year</th>
                 <th ng-click="changeSort('testDate')">Test Date</th>
-            </tr> -->
-            <!-- <tr ng-repeat="lecture in lectures | filter: filterCar | orderBy: sortProp : false" ng-click="openCar(car)"> -->
+            </tr> 
+            <tr ng-repeat="lecture in lectures | filter: filterCar | orderBy: sortProp : false" ng-click="openCar(car)">
             <tr ng-repeat="lecture in lectures >
                 <td>{{lecture.lectureDate}}</td>
                 <td>{{lecture.course.courseNum}}</td>
@@ -34,7 +32,8 @@
                 <td>{{lecture.course.univercity.uniName}}</td>
                 <td>{{lecture.course.univercity.uniAddress}}</td>
             </tr>
-        </table>
+        </table> -->
     </div>
+</div>
 
    

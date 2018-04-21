@@ -2,27 +2,52 @@
 
 <!--Main Display-->
 <div class="container" id="MainDisplay">
-    
-      <div class="jumbotron">
-         
-        <h1 class="text-center">Prof Dashboard</h1>
-   
-        <p>{{ clock | date:'HH:mm:ss'}}</p>
-        <p>{{ clock | date:'medium'}}</p>
-        
-        <div ng-controller='TimeCtrl'>
-          <p>{{ clock | date:'HH:mm:ss'}}</p>
-          <p>{{ clock | date:'medium'}}</p>
-        </div>
-        
 
+  <div class="jumbotron">
 
-  <a class="btn btn-primary " ng-href="#!/actors" role="button">Best Actors</a>
-  <a class="btn btn-primary " ng-href="#!/movies" role="button">Best Movies</a>
-  
-  <a class="btn btn-primary btn-lg" ng-href="#!/login" role="button">Go for it!</a>
-  <a class="btn btn-primary btn-lg" ng-href="#!/main" role="button">Main Forward</a>
-  
+    <h3 class="text-center">Prof Dashboard</h3>
+
+    <!-- <p>{{ clock | date:'HH:mm:ss'}}</p>
+    <div ng-controller='TimeCtrl'>
+      <p>{{ clock | date:'medium'}}</p>
+    </div> -->
+
+    <!-- from the Lectures page -->
+    <div class="container">
+      <h3>Coming Soon</h3>
+      <div>
+        <p>Lectures' Details</p>
+        <!-- <div>
+                    <label for="search">Filter:</label>
+                    <input type="text" id="search" ng-model="searchText">
+                </div> -->
+
+        <!-- <table class="table">
+          <tr>
+            <th ng-click="changeSort('brand')">Date</th>
+            <th ng-click="changeSort('model')">Course Number</th>
+            <th ng-click="changeSort('year')">Course Name</th>
+            <th ng-click="changeSort('km')">Lecture Number</th>
+            <th ng-click="changeSort('brand')">Lecture Title</th>
+            <th ng-click="changeSort('model')">About</th>
+            <th ng-click="changeSort('year')">Univercity</th>
+            <th ng-click="changeSort('km')">Address</th>
+          </tr> -->
+        <!-- <tr ng-repeat="lecture in lectures | filter: filterCar | orderBy: sortProp : false" ng-click="openCar(car)"> -->
+        <!-- <tr ng-repeat="lecture in lectures >
+                        <td>{{lecture.lectureDate}}</td>
+                        <td>{{lecture.course.courseNum}}</td>
+                        <td>{{lecture.course.courseName}}</td>
+                        <td>{{lecture.lectureNum}}</td>
+                        <td>{{lecture.lectureTitle}}</td>
+                        <td>{{lecture.about}}</td>
+                        <td>{{lecture.course.univercity.uniName}}</td>
+                        <td>{{lecture.course.univercity.uniAddress}}</td>
+          </tr>
+    </table> -->
       </div>
     </div>
 
+
+  </div>
+</div>

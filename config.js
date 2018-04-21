@@ -38,7 +38,7 @@ moviesApp.config(function ($routeProvider) {
     })
     .when("/lectures", {
       templateUrl: "prj/lectures/lecturesdirective.html",
-      controller: "LecturesCtrl"
+      controller: "lecturesCtrl"
     })
     .otherwise({
       redirectTo: "/"

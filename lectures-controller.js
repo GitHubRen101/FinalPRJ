@@ -1,4 +1,4 @@
-moviesApp.controller("_lecturesCtrl", function ($scope, $http) {
+moviesApp.controller("lecturesCtrl", function ($scope, $http) {
 
     $scope.lectures = [];
 
@@ -18,6 +18,7 @@ moviesApp.controller("_lecturesCtrl", function ($scope, $http) {
         this.serialNum = plainLecture.serialNum;
         this.lectureTitle = plainLecture.lectureTitle;
         this.lectureNum = plainLecture.lectureNum;
+        this.lectureName = plainLecture.lectureName;
         this.semester = plainLecture.semester;
         // this.length = new Date(1970, 1, 1, plainMovie.length.hr, plainMovie.length.min);
         this.lectureDate = plainLecture.lectureDate;
