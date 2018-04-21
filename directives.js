@@ -13,6 +13,7 @@ moviesApp.directive('actors', function() {
 //   };
 // });
 
+
 moviesApp.directive('navbar', function() {
   return {
       templateUrl: 'navbar.html',
@@ -21,7 +22,8 @@ moviesApp.directive('navbar', function() {
 }); 
 
 
-        //   moviesApp.directive('forminput', function() {
+        
+//moviesApp.directive('forminput', function() {
         //   return {
         //     restrict: 'E',
         //     compile: function(element, attrs) {
@@ -38,24 +40,3 @@ moviesApp.directive('navbar', function() {
         //   };
         // });
 
-
-
-       
-
-
-
-
-
-
-
-
-
-
-
-
-        // <div class="control-group">
-        //       <label class="control-label" for="nameInput"> Name </label>
-        //       <div class="controls">
-        //         <input type="text" class="input-xlarge" id="nameInput" name="nameInput">
-        //       </div>
-        // </div>

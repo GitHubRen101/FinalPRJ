@@ -4,7 +4,7 @@ moviesApp.controller("moviesListCtrl", function ($scope, $http) {
   // moviesApp.controller("moviesListCtrl",  function ($scope, $http, movieService) {
   // moviesApp.controller("moviesListCtrl", '$scope', '$http', function ($scope, $http, movieService) {
 
-  $scope.clock = "12:30";
+  
 
   // // // file loading with service
   // $scope.movies = [];
