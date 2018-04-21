@@ -1,10 +1,14 @@
 
-moviesApp.controller("moviesListCtrl", function ($scope, $http) {
+moviesApp.controller("moviesListCtrl", function ($scope, $http, activeUserService, $location) {
   // moviesApp.controller("moviesListCtrl", '$scope', '$http', function ($scope, $http) {
   // moviesApp.controller("moviesListCtrl",  function ($scope, $http, movieService) {
   // moviesApp.controller("moviesListCtrl", '$scope', '$http', function ($scope, $http, movieService) {
 
-  
+  // This is an authotization check. If the user is not logged going back to the home screen
+  if (!activeUserService.isLoggedIn()) {
+    $location.path("/");
+    return;
+  }
 
   // //  file loading with service
   // $scope.movies = [];
@@ -18,6 +22,8 @@ moviesApp.controller("moviesListCtrl", function ($scope, $http) {
 
 
   //------------------------------------------------
+
+
 
   // file loading plain
   $scope.movies = [];

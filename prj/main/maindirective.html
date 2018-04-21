@@ -35,8 +35,8 @@
             <th ng-click="changeSort('course.univercity.uniAddress')">Address</th>
           </tr> 
 
-          <tr ng-repeat="lecture in lectures | filter: searchText | orderBy: sortProp : false">
-            <!-- <tr ng-repeat="lecture in lectures | filter: searchText | orderBy: sortProp : false " ng-click="openCar(car) ">  -->
+          <tr ng-repeat="lecture in lectures | filter: searchText | orderBy: sortProp : false"  ng-click="openLecture(lecture) ">
+            <!-- <tr ng-repeat="lecture in lectures | filter: searchText | orderBy: sortProp : false " ng-click="openLecture(lecture) ">  -->
             <td>{{lecture.lectureDate}}</td>
             <td>{{lecture.course.courseNum}}</td>
             <td>{{lecture.course.courseName}}</td>

@@ -6,9 +6,8 @@ moviesApp.controller('navbarCtrl', function ($scope, activeUserService, $locatio
 
     $scope.logout = function () {
         activeUserService.logout();
-        // $scope.invalidCredentails = true;
+        $scope.invalidCredentails = true;
         $location.path('/');
     }
 
 })
-

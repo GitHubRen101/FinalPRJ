@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<table id="lecture-det-tab" class="table table-condensed">
+    <tbody>
+        <tr>
+            <td>{{lectureDate}}</td>
+        </tr>
+        <tr>
+            <td>{{lecture.course.courseNum}}</td>
+        </tr>
+        <tr>
+            <td>{{lecture.course.courseName}}</td>
+        </tr>
+        <tr>
+            <td>{{lecture.lectureNum}}</td>
+        </tr>
+        <tr>
+            <td>{{lecture.lectureTitle}}</td>
+        </tr>
+        <tr>
+            <td>{{lecture.about}}</td>
+        </tr>
+        <tr>
+            <td>{{lecture.course.univercity.uniName}}</td>
+        </tr>
+        <tr>
+            <td>{{lecture.course.univercity.uniAddress}}</td>
+        </tr>
+        <tr ng-repeat="filmcut in lecture.filmCuts">
+            <td ng-if="$index == 0" rowspan="{{lecture.filmCuts.length}}">{{lecture.name}}</td>
+            <td>{{filmcut.filmName}}</td>
+            <td>{{filmcut.theme}}</td>
+            <td>{{filmcut.start}}</td>
+            <td>{{filmcut.end}}</td>
+        </tr>
+    </tbody>
+</table>
+
