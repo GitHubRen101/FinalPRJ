@@ -1,4 +1,4 @@
-moviesApp.controller("mainCtrl", function ($scope, $http ) {
+moviesApp.controller("mainCtrl", function ($scope, $http) {
   // $scope.clock = Date.now();
 
   // var tick = function () {
@@ -26,8 +26,10 @@ moviesApp.controller("mainCtrl", function ($scope, $http ) {
   $http.get('prj/data/lectures.json').then(
     function mySuccess(response) {
       $scope.lectures = response.data;
-      console.log("loaded");
-      console.log(response.data);
+      // console.log("response.data:");
+      // console.log(response.data);
+      // console.log("$scope.lectures before:");
+      // console.log($scope.lectures);
     },
     function myError(response) {
       console.log("Error");
@@ -51,10 +53,16 @@ moviesApp.controller("mainCtrl", function ($scope, $http ) {
   // Push new Lecture to array
   $scope.addLecture = function (lecture) {
     var newLecture = new Lecture(lecture);
+    console.log("var newLecture:");
+    console.log(newLecture);
     $scope.lectures.push(newLecture);
   };
 
-
+// Sorting
+$scope.sortProp = "";
+$scope.changeSort = function (propName) {
+    $scope.sortProp = propName;
+}
 
 
 });

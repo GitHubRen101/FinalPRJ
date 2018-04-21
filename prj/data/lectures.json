@@ -4,14 +4,14 @@
         "lectureTitle": "Fantasy creatures",
         "lectureNum": "2",
         "semester": "2018/2",
-        "lectureDate": "15.04.2018",
+        "lectureDate": "15.05.2018",
         "about": "here goes lecture summary",
         "course": {
             "courseNum": "101509",
             "courseName": "Fantastic Mind",
             "courseSyllabus": "here goes course syllabus",
             "univercity": {
-                "uniName": "Open Univercity",
+                "uniName": "Open University",
                 "uniAddress": "Klausner 16 Tel Aviv"
             }
         },
@@ -51,14 +51,14 @@
         "lectureTitle": "Fantasy TOM",
         "lectureNum": "3",
         "semester": "2018/2",
-        "lectureDate": "22.04.2018",
+        "lectureDate": "22.05.2018",
         "about": "here goes lecture summary",
         "course": {
             "courseNum": "101509",
             "courseName": "Fantastic Mind",
             "courseSyllabus": "here goes course syllabus",
             "univercity": {
-                "uniName": "Open Univercity",
+                "uniName": "Open University",
                 "uniAddress": "Klausner 16 Tel Aviv"
             }
         },

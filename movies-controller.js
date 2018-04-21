@@ -6,12 +6,12 @@ moviesApp.controller("moviesListCtrl", function ($scope, $http) {
 
   
 
-  // // // file loading with service
+  // //  file loading with service
   // $scope.movies = [];
 
   // console.log("arrived to movies controller");
   // actorService.load().then(function () {
-  //   $scope.actors = movieService.movies;
+  //   $scope.movies = movieService.movies;
   // });
   // console.log("loaded movies");
 
@@ -45,6 +45,14 @@ moviesApp.controller("moviesListCtrl", function ($scope, $http) {
     this.tags = plainMovie.tags;
   };
 
+
+  // Push new Movie to array
+  $scope.addMovie = function (movie) {
+    var newMovie = new Movie(movie);
+    $scope.movies.push(newMovie);
+  };
+
+
   // formMovie Constructor 
   function formMovie(link, piclink, name, director, length){
     this.link = link;
@@ -57,12 +65,7 @@ moviesApp.controller("moviesListCtrl", function ($scope, $http) {
     // this.tags = tags;
   };
 
-  // Push new Movie to array
-  $scope.addMovie = function (movie) {
-    var newMovie = new Movie(movie);
-    $scope.movies.push(newMovie);
-  };
-
+  
   $scope.addFormMovie = function (link, piclink, name, director, length) {
     var newMovie = new formMovie(link, piclink, name, director, length);
     $scope.movies.push(newMovie);

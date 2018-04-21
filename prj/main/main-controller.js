@@ -52,9 +52,10 @@ moviesApp.controller("_mainCtrl", $scope, function ($scope, $route, $interval) {
   $scope.addLecture = function (lecture) {
     var newLecture = new Lecture(lecture);
     $scope.lectures.push(newLecture);
+    console.log($scope.lectures);
   };
 
-
+  
 
 
 });

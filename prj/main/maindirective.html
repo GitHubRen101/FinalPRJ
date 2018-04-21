@@ -14,7 +14,7 @@
 
     <!-- from the Lectures page -->
     <div class="container">
-      <h4>Coming Soon Lectures</h4>
+      <h5>Coming Soon Lectures</h5>
       {{lecture}}
       <div class="container">
 
@@ -22,8 +22,8 @@
           <label for="search">Filter:</label>
           <input type="text" id="search" ng-model="searchText">
         </div>
-
-        <table class="table">
+        
+        <table id="lectures-tab"  class=" table ">
           <tr>
             <th ng-click="changeSort('lectureDate')">Date</th>
             <th ng-click="changeSort('course.courseNum')">Course Number</th>
@@ -31,21 +31,24 @@
             <th ng-click="changeSort('lectureNum')">Lecture Number</th>
             <th>Lecture Title</th>
             <th>About</th>
-            <th ng-click="changeSort('course.univercity.uniName')">Univercity</th>
+            <th ng-click="changeSort('course.univercity.uniName')">University</th>
             <th ng-click="changeSort('course.univercity.uniAddress')">Address</th>
           </tr> 
-          <!-- <tr ng-repeat="lecture in lectures | filter: filterCar | orderBy: sortProp : false" ng-click="openCar(car)"> -->
-          <tr ng-repeat="lecture in lectures> 
-                        <td>{{lecture.lectureDate}}</td>
-                        <td>{{lecture.course.courseNum}}</td>
-                        <td>{{lecture.course.courseNum}}</td>
-                        <td>{{lecture.lectureNum}}</td>
-                        <td>{{lecture.lectureTitle}}</td>
-                        <td>{{lecture.about}}</td>
-                        <td>{{lecture.course.univercity.uniName}}</td>
-                        <td>{{lecture.course.univercity.uniAddress}}</td>
+
+          <tr ng-repeat="lecture in lectures | filter: searchText | orderBy: sortProp : false">
+            <!-- <tr ng-repeat="lecture in lectures | filter: searchText | orderBy: sortProp : false " ng-click="openCar(car) ">  -->
+            <td>{{lecture.lectureDate}}</td>
+            <td>{{lecture.course.courseNum}}</td>
+            <td>{{lecture.course.courseName}}</td>
+            <td>{{lecture.lectureNum}}</td>
+            <td>{{lecture.lectureTitle}}</td>
+            <td>{{lecture.about}}</td>
+            <td>{{lecture.course.univercity.uniName}}</td>
+            <td>{{lecture.course.univercity.uniAddress}}</td>
           </tr>
-    </table>
+        </table>
+
+        
       </div>
     </div>
 
