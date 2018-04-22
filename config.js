@@ -33,6 +33,10 @@ moviesApp.config(function ($routeProvider) {
       templateUrl: "prj/main/maindirective.html",
       controller: "mainCtrl"
     })
+    .when("/unis", {
+      templateUrl: "prj/universities/uni.html",
+      controller: "uniCtrl"
+    })
     // .when("/main/:index", {   
     //   templateUrl: "prj/main/lectureDetails.html",
     //   controller: "mainLectureDetailsCtrl"

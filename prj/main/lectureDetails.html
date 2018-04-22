@@ -1,29 +1,31 @@
 <!DOCTYPE html>
+<navbar></navbar>
+<br><br><br>
 <table id="lecture-det-tab" class="table table-condensed">
     <tbody>
         <tr>
-            <td>{{lectureDate}}</td>
+            <td class="font-weight-bold">Lecture Date</td><td>{{lectureDate}}</td>
         </tr>
         <tr>
-            <td>{{lecture.course.courseNum}}</td>
+            <td>Course Number</td><td>{{lecture.course.courseNum}}</td>
         </tr>
         <tr>
-            <td>{{lecture.course.courseName}}</td>
+            <td>Course Name</td><td>{{lecture.course.courseName}}</td>
         </tr>
         <tr>
-            <td>{{lecture.lectureNum}}</td>
+            <td>Lecture Number</td><td>{{lecture.lectureNum}}</td>
         </tr>
         <tr>
-            <td>{{lecture.lectureTitle}}</td>
+            <td>Lecture Title</td><td>{{lecture.lectureTitle}}</td>
         </tr>
         <tr>
-            <td>{{lecture.about}}</td>
+            <td>Lecture Summary</td><td>{{lecture.about}}</td>
         </tr>
         <tr>
-            <td>{{lecture.course.univercity.uniName}}</td>
+            <td>University Name</td><td>{{lecture.course.univercity.uniName}}</td>
         </tr>
         <tr>
-            <td>{{lecture.course.univercity.uniAddress}}</td>
+            <td>University Address</td><td>{{lecture.course.univercity.uniAddress}}</td>
         </tr>
         <tr ng-repeat="filmcut in lecture.filmCuts">
             <td ng-if="$index == 0" rowspan="{{lecture.filmCuts.length}}">{{lecture.name}}</td>

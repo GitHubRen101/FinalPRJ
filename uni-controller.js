@@ -7,20 +7,21 @@ moviesApp.controller('uniCtrl', function ($scope, activeUserService, $location, 
     // }
   
   
-    // $scope.universities = [];
-    // uniService.load(activeUserService.getUser()).then(function () {
-    //   $scope.universities = uniService.universities;
-    // });
-  
-  
+    $scope.universities = [];
+    uniService.load(activeUserService.getUser()).then(function () {
+      $scope.universities = uniService.universities;
+    });
+
+    console.log("$scope.universities:");
+    console.log($scope.universities);
      
-    // // Push new Lecture to array
-    // $scope.addUni = function (uni) {
-    //   var newUni = new Uni(uni);
-    //   console.log("var newUni:");
-    //   console.log(newUni);
-    //   $scope.universities.push(newUni);
-    // };
+    // Push new Lecture to array
+    $scope.addUni = function (uni) {
+      var newUni = new Uni(uni);
+      console.log("var newUni:");
+      console.log(newUni);
+      $scope.universities.push(newUni);
+    };
   
     // // Sorting
     // $scope.sortProp = "";
