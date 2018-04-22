@@ -22,6 +22,11 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 
 
+  <script data-require="angularjs@1.6.4" data-semver="1.6.4" src="https://code.angularjs.org/1.6.4/angular.min.js"></script>
+  <link data-require="bootstrap@4.0.0" data-semver="4.0.0" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+
+
+
   <script src="app.js"></script>
   <script src="app-controller.js"></script>
   <script src="config.js"></script>
@@ -60,8 +65,9 @@
 
 <body ng-app="moviesApp" ng-cloak>
 
-  <!-- <div id="nav" ng-show="navigation"> -->
-  <div id="nav">
+  
+  
+  <div id="nav" >
     <!-- <navbar> </navbar> -->
     <nav class="navbar navbar-expand-md  bg-light navbar-light fixed-top">
       <a class="navbar-brand" id="BrandLink" href="#">Einstein Prof</a>
@@ -102,7 +108,7 @@
   </div>
 
   <div ng-view> </div>
-
+  <navbar></navbar>
 </body>
 
 </html>

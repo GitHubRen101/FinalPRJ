@@ -21,7 +21,11 @@ moviesApp.directive('navbar', function() {
   };
 }); 
 
-
+moviesApp.directive('myActor', function() {
+  return {
+    templateUrl: 'actor.html'
+  };
+})
         
 //moviesApp.directive('forminput', function() {
         //   return {
