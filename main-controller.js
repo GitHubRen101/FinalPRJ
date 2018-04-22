@@ -12,31 +12,12 @@ moviesApp.controller('mainCtrl', function ($scope, activeUserService, $location,
   $scope.lectures = [];
   lectureService.load(activeUserService.getUser()).then(function () {
     $scope.lectures = lectureService.lectures;
-    
+
   });
 
   console.log("main controller: loaded lectures");
 
-  // $scope.clock = Date.now();
-
-  // var tick = function () {
-  //   $scope.clock = Date.now();
-  // }
-  // tick();
-  // $interval(tick, 1000);
-
-  // // function TimeCtrl($scope, $timeout) {
-  //   $scope.clock = "loading clock..."; // initialise the time variable
-  //   $scope.tickInterval = 1000 //ms
-
-  //   var tick = function () {
-  //     $scope.clock = Date.now() // get the current time
-  //     $timeout(tick, $scope.tickInterval); // reset the timer
-  //   }
-
-  //   // Start the timer
-  //   $timeout(tick, $scope.tickInterval);
-  // // }
+  
 
 
   // Push new Lecture to array
@@ -57,8 +38,8 @@ moviesApp.controller('mainCtrl', function ($scope, activeUserService, $location,
   // Open lecture details
   $scope.openLecture = function (lecture) {
     console.log("go to path:");
-    console.log('/main/' + $scope.lectures.indexOf(lecture));
-    $location.path('/main/' + $scope.lectures.indexOf(lecture));
+    console.log('/lecture/' + $scope.lectures.indexOf(lecture));
+    $location.path('/lecture/' + $scope.lectures.indexOf(lecture));
   }
 
 

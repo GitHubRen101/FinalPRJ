@@ -1,74 +1,34 @@
 <!DOCTYPE html>
-<nav class="navbar navbar-expand-md  bg-light navbar-light fixed-top">
-  <a class="navbar-brand" id="BrandLink" href="#">Movies Prof DB</a>
-  <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="collapsibleNavId"
-    aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item">
-        <a class="nav-link" href="#!/main" id="linkMain">DashBoard</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#!/movies" id="linkMovies">Movies</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#!/lectures" id="linkLectures">Lectures</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#!/about" id="linkAbout">About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#!/contact" id="linkContact">Contact</a>
-      </li>
-    </ul>
-    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+<!-- <nav class="navbar navbar-expand-md  bg-light navbar-light fixed-top "   > -->
+<nav class="navbar navbar-expand-md  bg-light navbar-light fixed-top " ng-show="showNav">
+  <nav class="navbar navbar-expand-md  bg-light navbar-light fixed-top ">
+    <a class="navbar-brand" id="BrandLink" href="#">Movies Prof DB</a>
+    <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="collapsibleNavId"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item">
-            <a class="nav-link" ng-click="logout()" href="#!/home">Logout</a>
+          <a class="nav-link" href="#!/main" id="linkMain">DashBoard</a>
         </li>
-    </ul>
-  </div>
-</nav>
-<br>
-.when("/", {
-  templateUrl: "prj/home/home.html",
-  controller: 'homeCtrl'
-})
-// .when("/home", {
-//   templateUrl : "prj/home/home.html",
-//   controller: 'homeCtrl'
-// })
-.when("/", {
-  templateUrl: "prj/home/home.html"
-})
-// .when("/index", {
-//   templateUrl : "prj/home/home.html"
-// })
-.when("/login", {
-  templateUrl: "prj/login/login.html",
-  controller: 'loginCtrl'
-})
-.when("/main", {
-  templateUrl: "prj/main/maindirective.html",
-  controller: "mainCtrl"
-})
-.when("/main/:index", {   
-  templateUrl: "prj/main/lectureDetails.html",
-  controller: "mainLectureDetailsCtrl"
-})
-.when("/about", {
-  templateUrl: "prj/about/about.html",
-  controller: "aboutCtrl"
-})
-.when("/contact", {
-  templateUrl: "prj/contact/contact.html"
-})
-.when("/movies", {
-  templateUrl: "prj/movies/moviesdirective.html",
-  controller: "moviesListCtrl"
-})
-.when("/lectures", {
-  templateUrl: "prj/lectures/lecturesdirective.html",
-  controller: "lecturesCtrl"
-})
+        <li class="nav-item">
+          <a class="nav-link" href="#!/movies" id="linkMovies">Movies</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#!/lectures" id="linkLectures">Lectures</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#!/about" id="linkAbout">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#!/contact" id="linkContact">Contact</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" ng-click="logout()" href="#!/home">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>

@@ -26,7 +26,7 @@ moviesApp.factory('uniService', function ($log, $http, $q) {
             $http.get('prj/data/unis.json').then(function (response) {
                 // on success
                 universities.splice(0, universities.length)
-                $log.debug("CARAPP: " + JSON.stringify(response));
+                $log.debug("on success " + "CARAPP: " + JSON.stringify(response));
                 for (var i = 0; i < response.data.length; i++) {
                     universities.push(new Uni(response.data[i]));
                 }
@@ -35,7 +35,7 @@ moviesApp.factory('uniService', function ($log, $http, $q) {
 
             }, function (response) {
                 // on failure
-                $log.error("CARAPP: " + JSON.stringify(response));
+                $log.error("on failure " +"CARAPP: " + JSON.stringify(response));
                 async.reject();
             });
         }

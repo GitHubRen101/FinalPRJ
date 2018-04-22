@@ -2,6 +2,7 @@
 
 <!--Main Display-->
 <div class="container" id="MainDisplay">
+  <!-- <navbar></navbar> -->
 
   <div class="jumbotron">
 
@@ -35,7 +36,7 @@
             <th ng-click="changeSort('course.univercity.uniAddress')">Address</th>
           </tr> 
 
-          <tr ng-repeat="lecture in lectures | filter: searchText | orderBy: sortProp : false"  ng-click="openLecture(lecture) ">
+          <tr ng-repeat="lecture in lectures | filter: searchText "  ng-click="openLecture(lecture) ">
             <!-- <tr ng-repeat="lecture in lectures | filter: searchText | orderBy: sortProp : false " ng-click="openLecture(lecture) ">  -->
             <td>{{lecture.lectureDate}}</td>
             <td>{{lecture.course.courseNum}}</td>

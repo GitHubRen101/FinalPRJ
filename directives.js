@@ -16,7 +16,7 @@ moviesApp.directive('actors', function() {
 
 moviesApp.directive('navbar', function() {
   return {
-      templateUrl: 'navbar.html',
+      templateUrl: 'prj/navbar/navbar.html',
       controller: 'navbarCtrl'
   };
 }); 
