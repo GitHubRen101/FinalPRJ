@@ -1,0 +1,16 @@
+[
+    {
+        "serialNum": 1,
+        "uniName": "Open University",
+        "uniAddress": "Klausner 16 Tel Aviv",
+        "logicalDelete": false
+    },
+    {
+        "serialNum": 2,
+        "uniName": "TA University",
+        "uniAddress": "Haim Levanon Ramat Aviv Tel Aviv",
+        "logicalDelete": false
+    } 
+    
+   
+]

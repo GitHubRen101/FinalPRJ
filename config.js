@@ -42,7 +42,8 @@ moviesApp.config(function ($routeProvider) {
       controller: "aboutCtrl"
     })
     .when("/contact", {
-      templateUrl: "prj/contact/contact.html"
+      templateUrl: "prj/contact/contact.html",
+      controller: "contactCtrl"
     })
     .when("/movies", {
       templateUrl: "prj/movies/moviesdirective.html",

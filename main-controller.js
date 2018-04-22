@@ -1,7 +1,7 @@
 moviesApp.controller('mainCtrl', function ($scope, activeUserService, $location, lectureService) {
 
 
-
+  console.log("main controller");
   // This is an authotization check. If the user is not logged going back to the home screen
   if (!activeUserService.isLoggedIn()) {
     $location.path("/");
@@ -12,8 +12,10 @@ moviesApp.controller('mainCtrl', function ($scope, activeUserService, $location,
   $scope.lectures = [];
   lectureService.load(activeUserService.getUser()).then(function () {
     $scope.lectures = lectureService.lectures;
+    
   });
 
+  console.log("main controller: loaded lectures");
 
   // $scope.clock = Date.now();
 

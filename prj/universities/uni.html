@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<!-- Display-->
+<div class="container" id="UniDisplay">
+
+    <div class="jumbotron">
+
+        <h5 class="text-center">Universities</h5>
+
+        <div class="container">
+            <div>
+                <label for="search">Filter:</label>
+                <input type="text" id="search" ng-model="searchText">
+            </div>
+       
+            <table id="unis-tab" class=" table ">
+                <tr>
+                    <th ng-click="changeSort('uniName')">Name</th>
+                    <th ng-click="changeSort('uniAddress')">Address</th>
+                </tr>
+                <tr ng-repeat="uni in universities | filter: searchText | orderBy: sortProp : false" ng-click="openUni(uni) ">
+                    <td>{{uni.uniName}}</td>
+                    <td>{{uni.uniAddress}}</td>
+            </table>
+        </div>
+
+
+
+    </div>
+</div>
