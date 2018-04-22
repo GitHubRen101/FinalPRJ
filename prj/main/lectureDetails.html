@@ -31,8 +31,8 @@
             <td ng-if="$index == 0" rowspan="{{lecture.filmCuts.length}}">{{lecture.name}}</td>
             <td>{{filmcut.filmName}}</td>
             <td>{{filmcut.theme}}</td>
-            <td>{{filmcut.start}}</td>
-            <td>{{filmcut.end}}</td>
+            <td>start {{filmcut.start.hours}}:{{filmcut.start.minutes}}:{{filmcut.start.seconds}}</td>
+            <td>end {{filmcut.end.hours}}:{{filmcut.end.minutes}}:{{filmcut.end.seconds}}</td>
         </tr>
     </tbody>
 </table>

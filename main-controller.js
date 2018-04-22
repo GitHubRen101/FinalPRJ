@@ -15,7 +15,7 @@ moviesApp.controller('mainCtrl', function ($scope, activeUserService, $location,
 
   });
 
-  console.log("main controller: loaded lectures");
+  console.log("lectures controller: loaded lectures");
 
   
 

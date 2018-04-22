@@ -2,9 +2,8 @@
 
 moviesApp.controller('navbarCtrl', function ($scope, activeUserService, $location) {
 
-    $scope.name = 'navbarCtrl';
-    
-
+        
+    $scope.name = activeUserService.getUser();
     
     var showNav = activeUserService.isLoggedIn();
     $scope.showNav = showNav;

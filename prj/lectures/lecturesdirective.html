@@ -3,34 +3,45 @@
 <navbar></navbar>
 <div class="container">
     <h3>Lectures</h3>
-    <div>
-        <!-- <div>
+    <div class="container">
+        <h5>Coming Soon Lectures</h5>
+        
+        <div class="container">
+  
+          <div>
             <label for="search">Filter:</label>
             <input type="text" id="search" ng-model="searchText">
-        </div> -->
-
-        <!-- <table class="table">
+          </div>
+          
+          <table id="lectures-tab"  class=" table ">
             <tr>
-                <th ng-click="changeSort('brand')">Brand</th>
-                <th ng-click="changeSort('model')">Model</th>
-                <th ng-click="changeSort('year')">Year</th>
-                <th ng-click="changeSort('km')">KM</th>
-                <th>Km/Year</th>
-                <th ng-click="changeSort('testDate')">Test Date</th>
+              <th ng-click="changeSort('lectureDate')">Date</th>
+              <th ng-click="changeSort('course.courseNum')">Course Number</th>
+              <th ng-click="changeSort('course.courseName')">Course Name</th>
+              <th ng-click="changeSort('lectureNum')">Lecture Number</th>
+              <th>Lecture Title</th>
+              <th>About</th>
+              <th ng-click="changeSort('course.univercity.uniName')">University</th>
+              <th ng-click="changeSort('course.univercity.uniAddress')">Address</th>
             </tr> 
-            <tr ng-repeat="lecture in lectures | filter: filterCar | orderBy: sortProp : false" ng-click="openCar(car)">
-            <tr ng-repeat="lecture in lectures >
-                <td>{{lecture.lectureDate}}</td>
-                <td>{{lecture.course.courseNum}}</td>
-                <td>{{lecture.course.courseName}}</td>
-                <td>{{lecture.lectureNum}}</td>
-                <td>{{lecture.lectureTitle}}</td>
-                <td>{{lecture.about}}</td>
-                <td>{{lecture.course.univercity.uniName}}</td>
-                <td>{{lecture.course.univercity.uniAddress}}</td>
+  
+            <tr ng-repeat="lecture in lectures | filter: searchText "  ng-click="openLecture(lecture) ">
+              <!-- <tr ng-repeat="lecture in lectures | filter: searchText | orderBy: sortProp : false " ng-click="openLecture(lecture) ">  -->
+              <td>{{lecture.lectureDate}}</td>
+              <td>{{lecture.course.courseNum}}</td>
+              <td>{{lecture.course.courseName}}</td>
+              <td>{{lecture.lectureNum}}</td>
+              <td>{{lecture.lectureTitle}}</td>
+              <td>{{lecture.about}}</td>
+              <td>{{lecture.course.univercity.uniName}}</td>
+              <td>{{lecture.course.univercity.uniAddress}}</td>
             </tr>
-        </table> -->
-    </div>
+          </table>
+  
+          
+        </div>
+      </div>
+  
 </div>
 
    
