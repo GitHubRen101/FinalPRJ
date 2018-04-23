@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<!-- <nav class="navbar navbar-expand-md  bg-light navbar-light fixed-top "   > -->
+
 <nav class="navbar navbar-expand-md  bg-light navbar-light fixed-top " ng-show="showNav">
   <nav class="navbar navbar-expand-md  bg-light navbar-light fixed-top ">
     <a class="navbar-brand" id="BrandLink" href="#">Movies Prof DB</a>
+    <b> Hi {{name.fname}}!</b>
     <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="collapsibleNavId"
       aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -19,6 +20,9 @@
           <a class="nav-link" href="#!/lectures" id="linkLectures">Lectures</a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" href="#!/courses" id="linkCourses">Courses</a>
+          </li>
+        <li class="nav-item">
           <a class="nav-link" href="#!/unis" id="linkUnis">Universities</a>
         </li>
         <li class="nav-item">
@@ -27,13 +31,10 @@
         <li class="nav-item">
           <a class="nav-link" href="#!/contact" id="linkContact">Contact</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="" id="userName">Hi {{name.fname}}!</a>
-        </li>
       </ul>
       <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
         <li class="nav-item">
-          <a class="nav-link" ng-click="logout()" href="#!/home">Logout</a>
+          <a class="nav-link " ng-click="logout()" href="#!/home">Logout</a>
         </li>
       </ul>
     </div>

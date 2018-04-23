@@ -2,29 +2,88 @@
 
 <!--Main Display-->
 <navbar></navbar>
-<div class="container" id="MainDisplay">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p>Div no controller:</p>
+<div class="container" id="MainDisplay1" >
+    <p>Maindisplay</p>
+    <hr>
+    <p>Container bla:</p>
+    <div class=" bla">
+      <p>inner container bla</p>
+      bla
+    </div>
   
-  <div class="jumbotron">
+    <p>Container w3 include:</p>
+    <div class="c bla" w3-include-html="'about.html'">
+        
+    </div>
+  
+    <p>Container ng-include:</p>
+    <div class="container lectures" ng-include="'about.html'">
+  
+    </div>
+    <p>Tag ng-include:</p>
+    <ng-include src="'about.html'"></ng-include>
+  
+</div>
+<hr>
+<p>Div + controller:</p>
+<div class="container" id="MainDisplay" ng-controller="mainCtrl">
+  <p>Maindisplay</p>
+  <hr>
+  <p>Container bla:</p>
+  <div class=" bla">
+    <p>inner container bla</p>
+    bla
+  </div>
 
-    <h3 class="text-center">Prof Dashboard</h3>
+  <p>Container w3 include:</p>
+  <div class="c bla" w3-include-html="'about.html'">
+      
+  </div>
 
-    <!-- <p>{{ clock | date:'HH:mm:ss'}}</p>
+  <p>Container ng-include:</p>
+  <div class="container lectures" ng-include="'about.html'">
+
+  </div>
+  <p>Tag ng-include:</p>
+  <ng-include src="'about.html'"></ng-include>
+
+
+
+
+
+  <!-- <div class="jumbotron"> -->
+  <!-- <h3 class="text-center">Prof Dashboard</h3> -->
+
+  <!-- <div  ng-include="lectures.html">
+    </div> -->
+
+
+
+  <!-- <p>{{ clock | date:'HH:mm:ss'}}</p>
     <div ng-controller='TimeCtrl'>
       <p>{{ clock | date:'medium'}}</p>
     </div> -->
 
-    <!-- from the Lectures page -->
-    <div class="container">
+  <!-- from the Lectures page -->
+  <!-- <div class="container">
       <h5>Coming Soon Lectures</h5>
-      
+
       <div class="container">
 
         <div>
           <label for="search">Filter:</label>
           <input type="text" id="search" ng-model="searchText">
         </div>
-        
-        <table id="lectures-tab"  class=" table ">
+
+        <table id="lectures-tab" class=" table ">
           <tr>
             <th ng-click="changeSort('lectureDate')">Date</th>
             <th ng-click="changeSort('course.courseNum')">Course Number</th>
@@ -34,10 +93,9 @@
             <th>About</th>
             <th ng-click="changeSort('course.univercity.uniName')">University</th>
             <th ng-click="changeSort('course.univercity.uniAddress')">Address</th>
-          </tr> 
+          </tr>
 
-          <tr ng-repeat="lecture in lectures | filter: searchText "  ng-click="openLecture(lecture) ">
-            <!-- <tr ng-repeat="lecture in lectures | filter: searchText | orderBy: sortProp : false " ng-click="openLecture(lecture) ">  -->
+          <tr ng-repeat="lecture in lectures | filter: searchText " ng-click="openLecture(lecture) ">
             <td>{{lecture.lectureDate}}</td>
             <td>{{lecture.course.courseNum}}</td>
             <td>{{lecture.course.courseName}}</td>
@@ -49,10 +107,10 @@
           </tr>
         </table>
 
-        
+
       </div>
-    </div>
+    </div> -->
 
 
-  </div>
+  <!-- </div> -->
 </div>

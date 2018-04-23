@@ -26,21 +26,20 @@ moviesApp.config(function ($routeProvider) {
     //   controller: "mainCtrl"
     // })
     .when('/lecture/:index', {
-      templateUrl : "prj/main/lectureDetails.html",
+      templateUrl: "prj/main/lectureDetails.html",
       controller: 'mainLectureDetailsCtrl'
     })
+    // .when("/main", {
+    //   templateUrl: "prj/main/maindirective.html",
+    //   controller: "mainCtrl"
+    // })
     .when("/main", {
-      templateUrl: "prj/main/maindirective.html",
-      controller: "mainCtrl"
+      templateUrl: "prj/main/maindirective.html"
     })
     .when("/unis", {
       templateUrl: "prj/universities/uni.html",
       controller: "uniCtrl"
     })
-    // .when("/main/:index", {   
-    //   templateUrl: "prj/main/lectureDetails.html",
-    //   controller: "mainLectureDetailsCtrl"
-    // })
     .when("/about", {
       templateUrl: "prj/about/about.html",
       controller: "aboutCtrl"
