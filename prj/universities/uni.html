@@ -7,25 +7,55 @@
     <div class="jumbotron">
 
         <h5 class="text-center">Universities</h5>
-
         <div class="container">
-            <div>
-                <label for="search">Filter:</label>
-                <input type="text" id="search" ng-model="searchText">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <div class="container">
+
+                        <form>
+                            <div class="form-row ">
+
+                                <div class=" form-group ">
+                                    <label for="inputUniName"> Name</label>
+                                    <input type="text" class="form-control" id="inputUniName" placeholder="University Name" ng-model="uniName">
+                                </div>
+
+                                <div class=" form-group ">
+                                    <label for="inputUniAddress">Address</label>
+                                    <input type="text" class="form-control" id="inputUniAddress" placeholder="Address" ng-model="uniAddress">
+                                </div>
+                            </div>
+
+                            <button type="button" class="btn btn-light" id="FormBtn" ng-click="addFormUni(uniName,uniAddress)">Add</button>
+                            <button type="reset" class="btn btn-light" id="FormBtn">Reset</button>
+
+                        </form>
+                        <br>
+                    </div>
+                </div>
+                <hr>
+                <div class="col-12 col-md-8">
+                    <div class="container">
+                        <div>
+                            <label for="search">Filter:</label>
+                            <input type="text" id="search" ng-model="searchText">
+                        </div>
+                        <hr>
+                        <table id="unis-tab" class=" table table-condensed">
+                            <tr>
+                                <th ng-click="changeSort('uniName')">Name</th>
+                                <th ng-click="changeSort('uniAddress')">Address</th>
+                            </tr>
+                            <tr ng-repeat="uni in universities | filter: searchText | orderBy: sortProp : false" ng-click="openUni(uni) ">
+                                <td>{{uni.uniName}}</td>
+                                <td>{{uni.uniAddress}}</td>
+                        </table>
+                    </div>
+                </div>
             </div>
-       
-            <table id="unis-tab" class=" table table-condensed">
-                <tr>
-                    <th ng-click="changeSort('uniName')">Name</th>
-                    <th ng-click="changeSort('uniAddress')">Address</th>
-                </tr>
-                <tr ng-repeat="uni in universities | filter: searchText | orderBy: sortProp : false" ng-click="openUni(uni) ">
-                    <td>{{uni.uniName}}</td>
-                    <td>{{uni.uniAddress}}</td>
-            </table>
+
+            <br>
+
         </div>
-
-
-
     </div>
 </div>
