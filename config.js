@@ -36,6 +36,14 @@ moviesApp.config(function ($routeProvider) {
     .when("/main", {
       templateUrl: "prj/main/maindirective.html"
     })
+    .when("/lectures", {
+      templateUrl: "prj/lectures/lecturesdirective.html",
+      controller: "lecturesCtrl"
+    })
+    .when("/courses", {
+      templateUrl: "prj/courses/coursesdirective.html",
+      controller: "coursesCtrl"
+    })
     .when("/unis", {
       templateUrl: "prj/universities/uni.html",
       controller: "uniCtrl"
@@ -52,10 +60,7 @@ moviesApp.config(function ($routeProvider) {
       templateUrl: "prj/movies/moviesdirective.html",
       controller: "moviesListCtrl"
     })
-    .when("/lectures", {
-      templateUrl: "prj/lectures/lecturesdirective.html",
-      controller: "lecturesCtrl"
-    })
+    
     .otherwise({
       redirectTo: "/"
     });

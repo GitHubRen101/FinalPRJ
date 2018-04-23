@@ -1,0 +1,29 @@
+[
+    {
+        "serialNum": 1,
+        "courseNum": "101509",
+        "courseName": "Fantastic Minds",
+        "courseSyllabus": "here goes course syllabus",
+        "numOfLectures": 14,
+        "semester": "2/2018",
+        "uniName": "Open University"
+    },
+    {
+        "serialNum": 2,
+        "courseNum": "101121",
+        "courseName": "Fantasy TOM",
+        "courseSyllabus": "here goes course syllabus",
+        "numOfLectures": 13,
+        "semester": "2/2018",
+        "uniName": "Open University"
+    },
+    {
+        "serialNum": 3,
+        "courseNum": "101999",
+        "courseName": "Here and there in literature",
+        "courseSyllabus": "here goes course syllabus",
+        "numOfLectures": 14,
+        "semester": "2/2018",
+        "uniName": "TA University"
+    }
+]
