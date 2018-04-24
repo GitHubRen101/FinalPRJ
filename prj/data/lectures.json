@@ -20,6 +20,7 @@
         },
         "filmCuts": [
             {
+                "serialNum": 1,
                 "filmName": "Harry Potter and the Prisoner of Azkaban",
                 "theme": "Fantasy creatures characters 1",
                 "start": {
@@ -34,6 +35,7 @@
                 }
             },
             {
+                "serialNum": 2,
                 "filmName": "Harry Potter and the Prisoner of Azkaban",
                 "theme": "Fantasy creatures characters 2",
                 "start": {

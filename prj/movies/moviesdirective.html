@@ -19,8 +19,8 @@
                 <input type="text" class="form-control form-control-sm" id="InputDirector" placeholder="Director" ng-model="director">
               </div>
               <div class=" form-group form-control-sm">
-                <label for="length">Length</label>
-                <input type="date" class="form-control form-control-sm" id="Length" placeholder="Length in min" ng-model="length">
+                <label for="length">Length in min</label>
+                <input type="text" class="form-control form-control-sm" id="Length" placeholder="Length in min" ng-model="length">
               </div>
               <div class=" form-group form-control-sm">
                 <label for="InputLinktoMovie">Link to IMDB</label>
@@ -40,7 +40,7 @@
             <p>Sort by</p>
             <select class=" form-control form-control-sm" ng-model="sortByIs ">
               <option value="None ">-- Select --</option>
-              <option value="name ">Name</option>
+              <option value="nacme ">Name</option>
               <option value="director ">Director</option>
               <option value="length ">Length</option>
             </select>
@@ -68,7 +68,7 @@
                       <a href="{{movie.link}}" target="_blank">{{movie.name}} </a>
                     </h5>
                     <p class="card-text">
-                      <small class="text-muted">Movie Length: {{Math.floor(movie.length / 60) + " hr " + movie.length % 60 + " min "}} </small>
+                      <!-- <small class="text-muted">Movie Length: {{Math.floor(movie.length / 60) + " hr " + movie.length % 60 + " min "}} </small> -->
                       <small class="text-muted">Movie Length: {{movie.length | lengthFilter }}</small>
                     </p>
                     <p class="card-text">

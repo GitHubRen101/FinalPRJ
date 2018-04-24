@@ -46,13 +46,43 @@
     </table>
     <hr>
 
-    <div ng-show="showMe">
-        <form>
-            <div class=" form-group form-control-sm">
-                <label for="about">Lecture Summary</label>
-                <input type="text" class="form-control form-control-sm" id="filmCut" placeholder="filmCut" ng-model="filmCut">
-            </div>
-            <button type="button" class="btn btn-outline-secondary" ng-click="updFilmCuts(lecture)">Secondary</button>
-        </form>
+    <!-- <div ng-show="showMe"> -->
+    <div class="row">
+        <div class="col-12 col-md-2">
+        </div>
+        <div class="col-12 col-md-10">
+            <form>
+                <div class="form-row ">
+
+                    <div class=" form-group form-control-sm">
+                        <label for="about">Film Name</label>
+                        <input type="text" class="form-control form-control-sm" id="filmName" placeholder="Film Name" ng-model="filmName">
+                    </div>
+                    <div class=" form-group form-control-sm">
+                        <label for="about">Filmcut Theme</label>
+                        <textarea class="form-control form-control-sm" rows="4" id="theme" placeholder="film Theme" ng-model="filmTheme"></textarea>
+                    </div>
+                    <div class=" form-group form-control-sm">
+                        <label for="filmCutStart">Film Cut Start HH MM SS</label>
+                        <input type="text" class="form-control form-control-sm" id="filmCutStartHours" placeholder="Filmcut Start Hours " ng-model="filmCutStartHours">
+                        <input type="text" class="form-control form-control-sm" id="filmCutStartMinutes" placeholder="Filmcut Start Minutes" ng-model="filmCutStartMinutes">
+                        <input type="text" class="form-control form-control-sm" id="filmCutStartSeconds" placeholder="Filmcut Start Seconds" ng-model="filmCutStartSeconds">
+                    </div>
+                    <div class=" form-group form-control-sm">
+                        <label for="filmCutEnd">Film Cut End</label>
+                        <input type="text" class="form-control form-control-sm" id="filmCutEndHours" placeholder="Filmcut End Hours" ng-model="filmCutEndHours">
+                        <input type="text" class="form-control form-control-sm" id="filmCutEndMinutes" placeholder="Filmcut End Minutes" ng-model="filmCutEndMinutes">
+                        <input type="text" class="form-control form-control-sm" id="filmCutEndSeconds" placeholder="Filmcut End Seconds" ng-model="filmCutEndSeconds">
+
+                    </div>
+                    <hr>
+                </div>
+                <button type="button" class="btn btn-outline-secondary" ng-click="updateFilmCuts(lecture)">Update</button>
+
+            </form>
+        </div>
     </div>
+
+</div>
+</div>
 </div>
