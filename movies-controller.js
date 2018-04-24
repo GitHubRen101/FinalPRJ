@@ -1,5 +1,5 @@
 
-moviesApp.controller("moviesListCtrl", function ($scope, $http, activeUserService, $location) {
+moviesApp.controller("moviesListCtrl", function ($scope, activeUserService, $location, movieService) {
   // moviesApp.controller("moviesListCtrl", '$scope', '$http', function ($scope, $http) {
   // moviesApp.controller("moviesListCtrl",  function ($scope, $http, movieService) {
   // moviesApp.controller("moviesListCtrl", '$scope', '$http', function ($scope, $http, movieService) {
@@ -10,14 +10,13 @@ moviesApp.controller("moviesListCtrl", function ($scope, $http, activeUserServic
     return;
   }
 
-  // //  file loading with service
-  // $scope.movies = [];
+  $scope.movies = [];
+  movieService.load(activeUserService.getUser()).then(function () {
+    $scope.movies = movieService.movies;
+  });
 
-  // console.log("arrived to movies controller");
-  // actorService.load().then(function () {
-  //   $scope.movies = movieService.movies;
-  // });
-  // console.log("loaded movies");
+  console.log("movies:");
+  console.log($scope.movies);
 
 
 
@@ -25,42 +24,42 @@ moviesApp.controller("moviesListCtrl", function ($scope, $http, activeUserServic
 
 
 
-  // file loading plain
-  $scope.movies = [];
+  // // file loading plain
+  // $scope.movies = [];
 
-  $http.get('prj/data/movies.json').then(
-    function mySuccess(response) {
-      $scope.movies = response.data;
-      // console.log("loaded movies");
-      // console.log(response.data);
-    },
-    function myError(response) {
-      console.log("Error");
-    });
-
-
-  // Movie Constructor 
-  function Movie(plainMovie) {
-    this.link = plainMovie.link;
-    this.piclink = plainMovie.piclink;
-    this.name = plainMovie.name;
-    this.length = plainMovie.length;
-    // this.length = new Date(1970, 1, 1, plainMovie.length.hr, plainMovie.length.min);
-    this.director = plainMovie.director;
-    this.actors = plainMovie.actors;
-    this.tags = plainMovie.tags;
-  };
+  // $http.get('prj/data/movies.json').then(
+  //   function mySuccess(response) {
+  //     $scope.movies = response.data;
+  //     // console.log("loaded movies");
+  //     // console.log(response.data);
+  //   },
+  //   function myError(response) {
+  //     console.log("Error");
+  //   });
 
 
-  // Push new Movie to array
-  $scope.addMovie = function (movie) {
-    var newMovie = new Movie(movie);
-    $scope.movies.push(newMovie);
-  };
+  // // Movie Constructor 
+  // function Movie(plainMovie) {
+  //   this.link = plainMovie.link;
+  //   this.piclink = plainMovie.piclink;
+  //   this.name = plainMovie.name;
+  //   this.length = plainMovie.length;
+  //   // this.length = new Date(1970, 1, 1, plainMovie.length.hr, plainMovie.length.min);
+  //   this.director = plainMovie.director;
+  //   this.actors = plainMovie.actors;
+  //   this.tags = plainMovie.tags;
+  // };
+
+
+  // // Push new Movie to array
+  // $scope.addMovie = function (movie) {
+  //   var newMovie = new Movie(movie);
+  //   $scope.movies.push(newMovie);
+  // };
 
 
   // formMovie Constructor 
-  function formMovie(link, piclink, name, director, length){
+  function formMovie(link, piclink, name, director, length) {
     this.link = link;
     this.piclink = piclink;
     this.name = name;
@@ -69,14 +68,29 @@ moviesApp.controller("moviesListCtrl", function ($scope, $http, activeUserServic
     this.director = director;
     // this.actors = actors;
     // this.tags = tags;
+    this.serialNum = 99999999;
+    this.logicalDelete = false;
   };
 
-  
+
   $scope.addFormMovie = function (link, piclink, name, director, length) {
     var newMovie = new formMovie(link, piclink, name, director, length);
+    var indx;
+    indx = $scope.lectures.length - 1;
+    var val;
+    val = $scope.lectures[indx].serialNum;
+    var newFormLecture = new formLecture(lectureTitle, lectureNum, lectureDate, about, course);
+    console.log("var newLecture:");
+    console.log(newFormLecture);
+    newFormLecture.serialNum = val + 1;
     $scope.movies.push(newMovie);
   };
 
+ // Sorting
+ $scope.sortProp = "";
+ $scope.changeSort = function (propName) {
+   $scope.sortProp = propName;
+ }
 
 
   //------------------------------------------------

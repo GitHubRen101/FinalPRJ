@@ -26,7 +26,7 @@ moviesApp.factory('movieService', function ($log, $http, $q) {
 
 
   // load from Jason
-  function loadm() {
+  function load() {
     var async = $q.defer();
 
     // Checking if the movie was ever loaded
@@ -59,7 +59,7 @@ moviesApp.factory('movieService', function ($log, $http, $q) {
 
   return {
     movies: movies,
-    loadm: loadm
+    load: load
 
   };
 

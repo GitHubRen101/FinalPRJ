@@ -77,14 +77,7 @@
     transition: max-height 0.2s ease-out;
 }
 
-/* .jumbotron {
+.jumbotron {
     background-color:transparent !important; 
-} */
-
-.lectures {
-    background-color: yellow;
 }
 
-.bla {
-    background-color: red;
-}

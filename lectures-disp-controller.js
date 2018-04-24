@@ -1,11 +1,11 @@
 moviesApp.controller("lecturesDispCtrl", function ($scope, activeUserService, $location, lectureService, courseService) {
 
-  console.log("lectures Disp controller");
-  // This is an authotization check. If the user is not logged going back to the home screen
-  if (!activeUserService.isLoggedIn()) {
-    $location.path("/");
-    return;
-  }
+  // console.log("lectures Disp controller");
+  // // This is an authotization check. If the user is not logged going back to the home screen
+  // if (!activeUserService.isLoggedIn()) {
+  //   $location.path("/");
+  //   return;
+  // }
 
   $scope.courses = [];
   courseService.load(activeUserService.getUser()).then(function () {

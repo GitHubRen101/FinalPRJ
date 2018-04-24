@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <div class="container">
-    <h1>Login to Movies Prof DB</h1>
+  <div class="jumbotron">
+    <h3>Login to Movies Prof DB</h3>
+    <br><hr>
     <div class="alert alert-danger" ng-show="invalidCredentails">
-            <strong>Error!</strong> Invalid email or password.
+      <strong>Error!</strong> Invalid email or password.
     </div>
     <form>
-        <div class="form-group">
-          <label for="email">Email address:</label>
-          <input type="email" class="form-control" id="email" ng-model="email">
-        </div>
-        <div class="form-group">
-          <label for="pwd">Password:</label>
-          <input type="password" class="form-control" id="pwd" ng-model="pwd">
-        </div>
-        <button class="btn btn-primary" ng-click="login()" >Login</button>
-        <button class="btn btn-primary" ng-click="logout()">I'm so out of here</button>
-      </form>
+      <div class="form-group">
+        <label for="email">Email address:</label>
+        <input type="email" class="form-control" id="email" ng-model="email">
+      </div>
+      <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" id="pwd" ng-model="pwd">
+      </div>
+      <button class="btn btn-primary" ng-click="login()">Login</button>
+      <button class="btn btn-primary" ng-click="logout()">I'm so out of here</button>
+    </form>
+  </div>
 </div>
-

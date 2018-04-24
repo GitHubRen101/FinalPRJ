@@ -1,39 +1,58 @@
 <!DOCTYPE html>
 <navbar></navbar>
-<br><br><br>
-<table id="lecture-det-tab" class="table table-condensed">
-    <tbody>
-        <tr>
-            <td class="font-weight-bold">Lecture Date</td><td>{{lectureDate}}</td>
-        </tr>
-        <tr>
-            <td>Course Number</td><td>{{lecture.course.courseNum}}</td>
-        </tr>
-        <tr>
-            <td>Course Name</td><td>{{lecture.course.courseName}}</td>
-        </tr>
-        <tr>
-            <td>Lecture Number</td><td>{{lecture.lectureNum}}</td>
-        </tr>
-        <tr>
-            <td>Lecture Title</td><td>{{lecture.lectureTitle}}</td>
-        </tr>
-        <tr>
-            <td>Lecture Summary</td><td>{{lecture.about}}</td>
-        </tr>
-        <tr>
-            <td>University Name</td><td>{{lecture.course.univercity.uniName}}</td>
-        </tr>
-        <tr>
-            <td>University Address</td><td>{{lecture.course.univercity.uniAddress}}</td>
-        </tr>
-        <tr ng-repeat="filmcut in lecture.filmCuts">
-            <td ng-if="$index == 0" rowspan="{{lecture.filmCuts.length}}">{{lecture.name}}</td>
-            <td>{{filmcut.filmName}}</td>
-            <td>{{filmcut.theme}}</td>
-            <td>start {{filmcut.start.hours}}:{{filmcut.start.minutes}}:{{filmcut.start.seconds}}</td>
-            <td>end {{filmcut.end.hours}}:{{filmcut.end.minutes}}:{{filmcut.end.seconds}}</td>
-        </tr>
-    </tbody>
-</table>
+<div class="jumbotron">
+    <table id="lecture-det-tab" class="table table-condensed">
+        <tbody>
+            <tr>
+                <td class="font-weight-bold">Lecture Date</td>
+                <td>{{lectureDate}}</td>
+            </tr>
+            <tr>
+                <td>Course Number</td>
+                <td>{{lecture.course.courseNum}}</td>
+            </tr>
+            <tr>
+                <td>Course Name</td>
+                <td>{{lecture.course.courseName}}</td>
+            </tr>
+            <tr>
+                <td>Lecture Number</td>
+                <td>{{lecture.lectureNum}}</td>
+            </tr>
+            <tr>
+                <td>Lecture Title</td>
+                <td>{{lecture.lectureTitle}}</td>
+            </tr>
+            <tr>
+                <td>Lecture Summary</td>
+                <td>{{lecture.about}}</td>
+            </tr>
+            <tr>
+                <td>University Name</td>
+                <td>{{lecture.course.univercity.uniName}}</td>
+            </tr>
+            <tr>
+                <td>University Address</td>
+                <td>{{lecture.course.univercity.uniAddress}}</td>
+            </tr>
+            <tr ng-repeat="filmcut in lecture.filmCuts">
+                <td ng-if="$index == 0" rowspan="{{lecture.filmCuts.length}}">{{lecture.name}}</td>
+                <td>{{filmcut.filmName}}</td>
+                <td>{{filmcut.theme}}</td>
+                <td>start {{filmcut.start.hours}}:{{filmcut.start.minutes}}:{{filmcut.start.seconds}}</td>
+                <td>end {{filmcut.end.hours}}:{{filmcut.end.minutes}}:{{filmcut.end.seconds}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
 
+    <div ng-show="showMe">
+        <form>
+            <div class=" form-group form-control-sm">
+                <label for="about">Lecture Summary</label>
+                <input type="text" class="form-control form-control-sm" id="filmCut" placeholder="filmCut" ng-model="filmCut">
+            </div>
+            <button type="button" class="btn btn-outline-secondary" ng-click="updFilmCuts(lecture)">Secondary</button>
+        </form>
+    </div>
+</div>

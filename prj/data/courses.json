@@ -20,6 +20,7 @@
         "semester": "2/2018",
         "uni": {
             "uniName": "Open University",
+            "uniAddress": "Klausner 16 Tel Aviv",
             "uniNum": 1
         }
     },
@@ -32,6 +33,7 @@
         "semester": "2/2018",
         "uni": {
             "uniName": "TA University",
+            "uniAddress": "Haim Levanon Ramat Aviv Tel Aviv",
             "uniNum": 2
         }
     }
