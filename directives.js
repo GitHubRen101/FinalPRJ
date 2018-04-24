@@ -6,6 +6,13 @@ moviesApp.directive('actors', function() {
   };
 });
 
+moviesApp.directive('lectures-disp', function() {
+  return {
+    templateUrl: 'lectures-display.html',
+    controller: "lecturesDispCtrl"
+  };
+});
+
 // moviesApp.directive('movies', function() {
 //   return {
 //     templateUrl: 'moviesdirective.html',

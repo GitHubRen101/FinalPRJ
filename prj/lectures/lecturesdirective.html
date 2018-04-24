@@ -33,11 +33,10 @@
             </div>
             <button type="button" class="btn btn-light" id="FormBtnAdd" ng-click="addFormLecture (lectureTitle,lectureNum,lectureDate,about,course)">Add</button>
             <button type="reset" class="btn btn-light" id="FormBtnReset">Reset</button>
-            </form>
-            <br>
-            <br>
           </div>
         </div>
+        <br>
+        <br>
         <hr>
         <div class="col-12 col-md-9">
           <div class="container">
@@ -59,17 +58,20 @@
               </tr>
               <tr ng-repeat="lecture in lectures | filter: searchText " ng-click="openLecture(lecture) ">
                 <!-- <tr ng-repeat="lecture in lectures | filter: searchText | orderBy: sortProp : false " ng-click="openLecture(lecture) ">  -->
-                <td>{{lecture.lectureDate}}</td>
+                <td>{{lecture.lectureDate | date}}</td>
                 <td>{{lecture.course.courseNum}}</td>
                 <td>{{lecture.course.courseName}}</td>
                 <td>{{lecture.lectureNum}}</td>
                 <td>{{lecture.lectureTitle}}</td>
                 <td>{{lecture.about}}</td>
                 <td>{{lecture.course.uni.uniName}}</td>
-                <td>{{lecture.course.uni.uniAddress}}</td>
+                <!-- <td>{{lecture.course.uni.uniAddress}}</td> -->
+                <td>{{lecture.course}}</td>
               </tr>
             </table>
           </div>
         </div>
       </div>
     </div>
+  </div>
+</div>

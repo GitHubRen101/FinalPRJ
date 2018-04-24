@@ -9,71 +9,38 @@
 <br>
 <br>
 <br>
-<p>Div no controller:</p>
-<div class="container" id="MainDisplay1" >
-    <p>Maindisplay</p>
-    <hr>
-    <p>Container bla:</p>
-    <div class=" bla">
-      <p>inner container bla</p>
-      bla
-    </div>
-  
-    <p>Container w3 include:</p>
-    <div class="c bla" w3-include-html="'about.html'">
-        
-    </div>
-  
-    <p>Container ng-include:</p>
-    <div class="container lectures" ng-include="'about.html'">
-  
-    </div>
-    <p>Tag ng-include:</p>
-    <ng-include src="'about.html'"></ng-include>
-  
+
+<div class="container" id="MainDisplay1">
+  <p>Maindisplay with directive</p>
+  <navbar></navbar>
+  <br>
+  <hr>
+  <br>
+  <lectures-disp></lectures-disp>
+  <hr>
 </div>
 <hr>
-<p>Div + controller:</p>
-<div class="container" id="MainDisplay" ng-controller="mainCtrl">
-  <p>Maindisplay</p>
-  <hr>
-  <p>Container bla:</p>
-  <div class=" bla">
-    <p>inner container bla</p>
-    bla
-  </div>
-
-  <p>Container w3 include:</p>
-  <div class="c bla" w3-include-html="'about.html'">
-      
-  </div>
-
-  <p>Container ng-include:</p>
-  <div class="container lectures" ng-include="'about.html'">
-
-  </div>
-  <p>Tag ng-include:</p>
-  <ng-include src="'about.html'"></ng-include>
 
 
 
 
 
-  <!-- <div class="jumbotron"> -->
-  <!-- <h3 class="text-center">Prof Dashboard</h3> -->
 
-  <!-- <div  ng-include="lectures.html">
+<!-- <div class="jumbotron"> -->
+<!-- <h3 class="text-center">Prof Dashboard</h3> -->
+
+<!-- <div  ng-include="lectures.html">
     </div> -->
 
 
 
-  <!-- <p>{{ clock | date:'HH:mm:ss'}}</p>
+<!-- <p>{{ clock | date:'HH:mm:ss'}}</p>
     <div ng-controller='TimeCtrl'>
       <p>{{ clock | date:'medium'}}</p>
     </div> -->
 
-  <!-- from the Lectures page -->
-  <!-- <div class="container">
+<!-- from the Lectures page -->
+<!-- <div class="container">
       <h5>Coming Soon Lectures</h5>
 
       <div class="container">
@@ -112,5 +79,5 @@
     </div> -->
 
 
-  <!-- </div> -->
+<!-- </div> -->
 </div>

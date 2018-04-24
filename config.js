@@ -34,7 +34,8 @@ moviesApp.config(function ($routeProvider) {
     //   controller: "mainCtrl"
     // })
     .when("/main", {
-      templateUrl: "prj/main/maindirective.html"
+      templateUrl: "prj/main/maindirective.html",
+      controller: "mainCtrl"      
     })
     .when("/lectures", {
       templateUrl: "prj/lectures/lecturesdirective.html",
