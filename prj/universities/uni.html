@@ -6,7 +6,7 @@
 
     <div class="jumbotron">
 
-        <h5 class="text-center">Universities</h5>
+
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-4">
@@ -31,6 +31,7 @@
 
                         </form>
                         <br>
+                        <br>
                     </div>
                 </div>
                 <hr>
@@ -43,10 +44,12 @@
                         <hr>
                         <table id="unis-tab" class=" table table-condensed">
                             <tr>
+                                <th ng-click="changeSort('serialNum')">#</th>
                                 <th ng-click="changeSort('uniName')">Name</th>
                                 <th ng-click="changeSort('uniAddress')">Address</th>
                             </tr>
                             <tr ng-repeat="uni in universities | filter: searchText | orderBy: sortProp : false" ng-click="openUni(uni) ">
+                                <td>{{uni.serialNum}}</td>
                                 <td>{{uni.uniName}}</td>
                                 <td>{{uni.uniAddress}}</td>
                         </table>
