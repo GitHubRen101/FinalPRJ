@@ -43,4 +43,5 @@ moviesApp.controller("mainLectureDetailsCtrl", function ($scope, $routeParams, l
         newFilmCut.serialNum = val + 1;
         $scope.lecture.filmCuts.push(newFilmCut);
     };
-});
+    
+    });
