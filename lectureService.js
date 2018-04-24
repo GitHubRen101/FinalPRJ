@@ -11,7 +11,7 @@ moviesApp.factory('lectureService', function ($log, $http, $q) {
         this.lectureTitle = plainLecture.lectureTitle;
         this.lectureNum = plainLecture.lectureNum;
         this.lectureName = plainLecture.lectureName;
-        this.semester = plainLecture.semester;
+        // this.semester = plainLecture.semester;
         // this.length = new Date(1970, 1, 1, plainMovie.length.hr, plainMovie.length.min);
         this.lectureDate = plainLecture.lectureDate;
         this.about = plainLecture.about;

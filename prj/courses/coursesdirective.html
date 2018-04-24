@@ -55,9 +55,9 @@
                         <hr>
                         <table id="courses-tab" class=" table table-condensed">
                             <tr>
-                                <th ng-click="changeSort('uniName')">#</th>
-                                <th ng-click="changeSort('uniName')">Course Name</th>
-                                <th ng-click="changeSort('uniAddress')">Course Name</th>
+                                <th >#</th>
+                                <th ng-click="changeSort('courseNum')">Course Num</th>
+                                <th ng-click="changeSort('courseName')">Course Name</th>
                             </tr>
                             <tr ng-repeat="course in courses | filter: searchText | orderBy: sortProp : false" ng-click=" ">
                                 <td>{{course.serialNum}}</td>
@@ -66,7 +66,7 @@
                                 <td>{{course.semester}}</td>
                                 <td>{{course.courseSyllabus}}</td>
                                 <td>{{course.numOfLectures}}</td>
-                                <td>{{course.uniName}}</td>
+                                <td>{{course.uni.uniName}}</td>
                         </table>
                     </div>
 

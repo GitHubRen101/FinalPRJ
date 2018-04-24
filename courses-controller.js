@@ -43,7 +43,7 @@ moviesApp.controller('coursesCtrl', function ($scope, activeUserService, $locati
     this.courseSyllabus = courseSyllabus;
     this.numOfLectures = numOfLectures;
     this.semester = semester;
-    this.uniName = uni.uniName;
+    this.uni = uni;
     this.serialNum = 99999999;
     this.logicalDelete = false;
   };

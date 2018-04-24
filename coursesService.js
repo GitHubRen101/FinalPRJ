@@ -11,7 +11,7 @@ moviesApp.factory('courseService', function ($log, $http, $q) {
         this.courseSyllabus = plainCourse.courseSyllabus;
         this.numOfLectures = plainCourse.numOfLectures;
         this.semester = plainCourse.semester;
-        this.uniName = plainCourse.uniName;
+        this.uni = plainCourse.uni;
         this.logicalDelete = plainCourse.logicalDelete;
     };
 

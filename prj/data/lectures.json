@@ -3,16 +3,18 @@
         "serialNum": 1,
         "lectureTitle": "Fantasy creatures",
         "lectureNum": "2",
-        "semester": "2018/2",
         "lectureDate": "15.05.2018",
         "about": "here goes lecture summary",
         "course": {
+            "serialNum": 1,
             "courseNum": "101509",
-            "courseName": "Fantastic Mind",
+            "courseName": "Fantastic Minds",
             "courseSyllabus": "here goes course syllabus",
-            "univercity": {
+            "numOfLectures": 14,
+            "semester": "2/2018",
+            "uni": {
                 "uniName": "Open University",
-                "uniAddress": "Klausner 16 Tel Aviv"
+                "uniNum": 1
             }
         },
         "filmCuts": [
@@ -50,16 +52,18 @@
         "serialNum": 2,
         "lectureTitle": "Fantasy TOM",
         "lectureNum": "3",
-        "semester": "2018/2",
         "lectureDate": "22.05.2018",
         "about": "here goes lecture summary",
         "course": {
-            "courseNum": "101509",
-            "courseName": "Fantastic Mind",
+            "serialNum": 2,
+            "courseNum": "101121",
+            "courseName": "Fantasy TOM",
             "courseSyllabus": "here goes course syllabus",
-            "univercity": {
+            "numOfLectures": 13,
+            "semester": "2/2018",
+            "uni": {
                 "uniName": "Open University",
-                "uniAddress": "Klausner 16 Tel Aviv"
+                "uniNum": 1
             }
         },
         "filmCuts": [

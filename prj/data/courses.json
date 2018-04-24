@@ -6,7 +6,10 @@
         "courseSyllabus": "here goes course syllabus",
         "numOfLectures": 14,
         "semester": "2/2018",
-        "uniName": "Open University"
+        "uni": {
+            "uniName": "Open University",
+            "uniNum": 1
+        }
     },
     {
         "serialNum": 2,
@@ -15,7 +18,10 @@
         "courseSyllabus": "here goes course syllabus",
         "numOfLectures": 13,
         "semester": "2/2018",
-        "uniName": "Open University"
+        "uni": {
+            "uniName": "Open University",
+            "uniNum": 1
+        }
     },
     {
         "serialNum": 3,
@@ -24,6 +30,9 @@
         "courseSyllabus": "here goes course syllabus",
         "numOfLectures": 14,
         "semester": "2/2018",
-        "uniName": "TA University"
+        "uni": {
+            "uniName": "TA University",
+            "uniNum": 2
+        }
     }
 ]

@@ -4,7 +4,7 @@ moviesApp.factory('uniService', function ($log, $http, $q) {
     var wasEverLoaded = false;
 
 
-    // Lecture Constructor 
+    // Uni Constructor 
     function Uni(plainUni) {
         this.serialNum = plainUni.serialNum;
         this.uniName = plainUni.uniName;
