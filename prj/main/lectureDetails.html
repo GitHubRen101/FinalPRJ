@@ -59,10 +59,11 @@
             <div class="col-12 col-md-10">
                 <form>
                     <div class="form-row ">
-
-                        <div class=" form-group form-control-sm">
-                            <label for="about">Film Name</label>
-                            <input type="text" class="form-control form-control-sm" id="filmName" placeholder="Film Name" ng-model="filmName">
+                        <div class="form-group form-control-sm">
+                            <label for="movie">Select Movie:</label>
+                            <select class="form-control form-control-sm" id="movie" ng-model="movie" ng-options="movie.name for movie in movies">
+                                {{movie.name}}
+                            </select>
                         </div>
                         <div class=" form-group form-control-sm">
                             <label for="about">Filmcut Theme</label>
@@ -83,7 +84,8 @@
                         </div>
                         <hr>
                     </div>
-                    <button type="button" class="btn btn-outline-secondary" ng-click="updateFilmCuts(filmName,filmTheme,filmCutStartHours,filmCutStartMinutes, filmCutStartSeconds, filmCutEndHours, filmCutEndMinutes, filmCutEndSeconds)">Update</button>
+                    <button type="button" class="btn btn-outline-secondary" ng-click="updateFilmCuts(movie,filmTheme,filmCutStartHours,filmCutStartMinutes, filmCutStartSeconds, filmCutEndHours, filmCutEndMinutes, filmCutEndSeconds)">Update</button>
+                    <button type="reset" class="btn btn-outline-secondary" id="FormResetBtn">Reset</button>
 
                 </form>
             </div>

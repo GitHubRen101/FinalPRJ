@@ -59,10 +59,10 @@ moviesApp.controller("moviesListCtrl", function ($scope, activeUserService, $loc
 
 
   // formMovie Constructor 
-  function formMovie(link, piclink, name, director, length) {
+  function formMovie(link, piclink, movieName, director, length) {
     this.link = link;
     this.piclink = piclink;
-    this.name = name;
+    this.name = movieName;
     this.length = length;
     // this.length = new Date(1970, 1, 1, plainMovie.length.hr, plainMovie.length.min);
     this.director = director;
@@ -73,16 +73,15 @@ moviesApp.controller("moviesListCtrl", function ($scope, activeUserService, $loc
   };
 
 
-  $scope.addFormMovie = function (link, piclink, name, director, length) {
-    var newMovie = new formMovie(link, piclink, name, director, length);
+  $scope.addFormMovie = function (link, piclink, movieName, director, length) {
     var indx;
-    indx = $scope.lectures.length - 1;
+    indx = $scope.movies.length - 1;
     var val;
-    val = $scope.lectures[indx].serialNum;
-    var newFormLecture = new formLecture(lectureTitle, lectureNum, lectureDate, about, course);
-    console.log("var newLecture:");
-    console.log(newFormLecture);
-    newFormLecture.serialNum = val + 1;
+    val = $scope.movies[indx].serialNum;
+    var newMovie  = new formMovie(link, piclink, movieName, director, length);
+    console.log("newMovie:");
+    console.log(newMovie);
+    newMovie.serialNum = val + 1;
     $scope.movies.push(newMovie);
   };
 

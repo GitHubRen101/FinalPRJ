@@ -12,7 +12,7 @@
             <form>
               <div class=" form-group form-control-sm">
                 <label for="InputMovieName">Movie Name</label>
-                <input type="text" class="form-control form-control-sm" id="InputMovieName" placeholder="Movie name" ng-model="name">
+                <input type="text" class="form-control form-control-sm" id="InputMovieName" placeholder="Movie name" ng-model="movieName">
               </div>
               <div class=" form-group form-control-sm">
                 <label for="InputDirector">Director</label>
@@ -30,7 +30,7 @@
                 <label for="InputLinktoPicture">Link to picture</label>
                 <input type="text" class="form-control form-control-sm" id="InputLinktoPicture" placeholder="Picture Link" ng-model="piclink">
               </div>
-              <button type="button" class="btn btn-light" id="FormBtn" ng-click="addFormMovie(link, piclink, name, director, length)">Add</button>
+              <button type="button" class="btn btn-light" id="FormBtn" ng-click="addFormMovie(link, piclink, movieName, director, length)">Add</button>
               <button type="reset" class="btn btn-light" id="FormBtnReset">Reset</button>
             </form>
           </div>
