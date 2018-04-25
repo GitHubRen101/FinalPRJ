@@ -10,6 +10,7 @@ moviesApp.controller("mainLectureDetailsCtrl", function ($scope, $routeParams, l
     // }
 
     var indexToDisplay = parseInt($routeParams.index);
+    $scope.showForm = false;
 
     lectureService.load(activeUserService.getUser()).then(function () {
         $scope.lecture = lectureService.lectures[indexToDisplay];
@@ -22,14 +23,14 @@ moviesApp.controller("mainLectureDetailsCtrl", function ($scope, $routeParams, l
 
     // filmCuts Constructor 
     function FilmCut(filmName, filmTheme, filmCutStartHours, filmCutStartMinutes, filmCutStartSeconds, filmCutEndHours, filmCutEndMinutes, filmCutEndSeconds) {
-        this.filmCuts.filmName = filmName;
-        this.filmCuts.theme = filmTheme;
-        this.filmCuts.start.hours = filmCutStartHours;
-        this.filmCuts.start.minutes = filmCutStartMinutes;
-        this.filmCuts.start.seconds = filmCutStartSeconds;
-        this.filmCuts.end.hours = filmCutEndHours;
-        this.filmCuts.end.minutes = filmCutEndMinutes;
-        this.filmCuts.end.seconds = filmCutEndSeconds;
+        this.filmName = filmName;
+        this.theme = filmTheme;
+        this.startHours = filmCutStartHours;
+        this.startMinutes = filmCutStartMinutes;
+        this.startSeconds = filmCutStartSeconds;
+        this.endHours = filmCutEndHours;
+        this.endMinutes = filmCutEndMinutes;
+        this.endSeconds = filmCutEndSeconds;
         this.serialNum = 99999999;
         this.logicalDelete = false;
     };
@@ -43,5 +44,5 @@ moviesApp.controller("mainLectureDetailsCtrl", function ($scope, $routeParams, l
         newFilmCut.serialNum = val + 1;
         $scope.lecture.filmCuts.push(newFilmCut);
     };
-    
+
     });

@@ -3,6 +3,7 @@
 <navbar></navbar>
 <div class="container-fluid">
   <div class="jumbotron">
+
     <div class="container">
       <div class="row">
         <div class="col-12 col-md-3">
@@ -45,6 +46,7 @@
               <input type="text" class="form-control-sm" id="search" ng-model="searchText">
             </div>
             <hr>
+            <p>Click line for Details</p>
             <table id="lectures-tab" class=" table ">
               <tr>
                 <th ng-click="changeSort('lectureDate')">Date</th>
@@ -66,9 +68,9 @@
                 <td>{{lecture.about}}</td>
                 <td>{{lecture.course.uni.uniName}}</td>
                 <td>{{lecture.course.uni.uniAddress}}</td>
-                
+
               </tr>
-              
+
             </table>
           </div>
         </div>

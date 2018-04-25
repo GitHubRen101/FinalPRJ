@@ -23,31 +23,23 @@
                 "serialNum": 1,
                 "filmName": "Harry Potter and the Prisoner of Azkaban",
                 "theme": "Fantasy creatures characters 1",
-                "start": {
-                    "hours": 1,
-                    "minutes": 21,
-                    "seconds": 33
-                },
-                "end": {
-                    "hours": 1,
-                    "minutes": 25,
-                    "seconds": 48
-                }
+                "startHours": 1,
+                "startMinutes": 21,
+                "startSeconds": 33,
+                "endHours": 1,
+                "endMinutes": 25,
+                "endSeconds": 48
             },
             {
                 "serialNum": 2,
                 "filmName": "Harry Potter and the Prisoner of Azkaban",
                 "theme": "Fantasy creatures characters 2",
-                "start": {
-                    "hours": 1,
-                    "minutes": 31,
-                    "seconds": 35
-                },
-                "end": {
-                    "hours": 1,
-                    "minutes": 45,
-                    "seconds": 46
-                }
+                "startHours": 1,
+                "startMinutes": 31,
+                "startSeconds": 35,
+                "endHours": 1,
+                "endMinutes": 45,
+                "endSeconds": 46
             }
         ]
     },
@@ -74,30 +66,23 @@
             {
                 "filmName": "Harry Potter and the Deathly Hallows: Part 2",
                 "theme": "Fantasy creatures TOM 1",
-                "start": {
-                    "hours": 1,
-                    "minutes": 21,
-                    "seconds": 33
-                },
-                "end": {
-                    "hours": 1,
-                    "minutes": 25,
-                    "seconds": 48
-                }
+                "serialNum": 2,
+                "startHours": 1,
+                "startMinutes": 21,
+                "startSeconds": 33,
+                "endHours": 1,
+                "endMinutes": 55,
+                "endSeconds": 48
             },
             {
                 "filmName": "Harry Potter and the Deathly Hallows: Part 2",
                 "theme": "Fantasy creatures TOM 2",
-                "start": {
-                    "hours": 1,
-                    "minutes": 31,
-                    "seconds": 35
-                },
-                "end": {
-                    "hours": 1,
-                    "minutes": 45,
-                    "seconds": 46
-                }
+                "startHours": 1,
+                "startMinutes": 31,
+                "startSeconds": 35,
+                "endHours": 1,
+                "endMinutes": 45,
+                "endSeconds": 46
             }
         ]
     }
