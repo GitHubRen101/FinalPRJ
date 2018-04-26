@@ -33,7 +33,7 @@
                                 </div>
                                 <div class="form-group ">
                                     <label for="uniName">Select University name:</label>
-                                    <select class="form-control form-control-sm" id="uniName" ng-model="uni" ng-options="uni.uniName for uni in universities">
+                                    <select class="form-control form-control-sm" id="uniName" ng-model="uni" ng-options="uni.uniName for uni in universities" ng-hide="uni.logicalDelete"">
                                         {{uni.uniName}}
                                     </select>
                                 </div>
@@ -59,7 +59,7 @@
                                 <th ng-click="changeSort('courseNum')">Course Num</th>
                                 <th ng-click="changeSort('courseName')">Course Name</th>
                             </tr>
-                            <tr ng-repeat="course in courses | filter: searchText | orderBy: sortProp : false" ng-click=" ">
+                            <tr ng-repeat="course in courses | filter: searchText | orderBy: sortProp : false" ng-hide="course.logicalDelete">
                                 <td>{{course.serialNum}}</td>
                                 <td>{{course.courseNum}}</td>
                                 <td>{{course.courseName}}</td>
@@ -67,6 +67,10 @@
                                 <td>{{course.courseSyllabus}}</td>
                                 <td>{{course.numOfLectures}}</td>
                                 <td>{{course.uni.uniName}}</td>
+                                <td>
+                                        <button type="button" class="btn btn-light btn-sm" id="DelBtn" ng-click="course.logicalDelete = true;">Delete</button>
+                                      </td>
+                                </tr>
                         </table>
                     </div>
 

@@ -6,18 +6,18 @@ moviesApp.directive('actors', function() {
   };
 });
 
-moviesApp.directive('lectures-disp', function() {
-  return {
-    templateUrl: 'lectures-display.html'
-  };
-});
-
-// moviesApp.directive('lectures-disp', function() {
+// moviesApp.directive('lecturesDisp', function() {
 //   return {
-//     templateUrl: 'lectures-display.html',
-//     controller: "lecturesDispCtrl"
+//     templateUrl: 'lectures-display.html'
 //   };
 // });
+
+moviesApp.directive('lecturesDisp', function() {
+  return {
+    templateUrl: 'prj/lectures/lectures-display.html',
+    controller: "lecturesDispCtrl"
+  };
+});
 
 // moviesApp.directive('movies', function() {
 //   return {

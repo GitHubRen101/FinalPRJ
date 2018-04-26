@@ -1,4 +1,15 @@
-moviesApp.controller('mainCtrl', function ($scope, activeUserService, $location, lectureService) {
+moviesApp.controller('mainCtrl', function ($scope, $rootScope, activeUserService, $location, lectureService) {
+
+  $scope.isLoaded = false;
+  $rootScope.$on('$includeContentLoaded', function (event) {
+    $scope.isLoaded = true;
+  });
+
+
+
+
+
+
 
 
   console.log("main controller");
@@ -7,13 +18,12 @@ moviesApp.controller('mainCtrl', function ($scope, activeUserService, $location,
     $location.path("/");
     return;
   }
-  
+
   console.log("main controller: passed here");
 
-  
 
 
- 
+
 
 
 

@@ -29,14 +29,13 @@ moviesApp.config(function ($routeProvider) {
       templateUrl: "prj/main/lectureDetails.html",
       controller: 'mainLectureDetailsCtrl'
     })
+    .when("/main", {
+      templateUrl: "prj/main/maindirective.html"
+    })
     // .when("/main", {
     //   templateUrl: "prj/main/maindirective.html",
-    //   controller: "mainCtrl"
+    //   controller: "mainCtrl"      
     // })
-    .when("/main", {
-      templateUrl: "prj/main/maindirective.html",
-      controller: "mainCtrl"      
-    })
     .when("/lectures", {
       templateUrl: "prj/lectures/lecturesdirective.html",
       controller: "lecturesCtrl"

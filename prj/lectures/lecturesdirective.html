@@ -27,7 +27,7 @@
               </div>
               <div class="form-group form-control-sm">
                 <label for="course">Select Course:</label>
-                <select class="form-control form-control-sm" id="course" ng-model="course" ng-options="course.courseName for course in courses">
+                <select class="form-control form-control-sm" id="course" ng-model="course" ng-options="course.courseName for course in courses"> ng-hide="course.logicalDelete"
                   {{course.courseName}}
                 </select>
               </div>
@@ -58,19 +58,19 @@
                 <th ng-click="changeSort('course.univercity.uniName')">University</th>
                 <th ng-click="changeSort('course.univercity.uniAddress')">Address</th>
               </tr>
-              <tr ng-repeat="lecture in lectures | filter: searchText " ng-click="openLecture(lecture) ">
-                <!-- <tr ng-repeat="lecture in lectures | filter: searchText | orderBy: sortProp : false " ng-click="openLecture(lecture) ">  -->
-                <td>{{lecture.lectureDate | date}}</td>
-                <td>{{lecture.course.courseNum}}</td>
-                <td>{{lecture.course.courseName}}</td>
-                <td>{{lecture.lectureNum}}</td>
-                <td>{{lecture.lectureTitle}}</td>
-                <td>{{lecture.about}}</td>
-                <td>{{lecture.course.uni.uniName}}</td>
-                <td>{{lecture.course.uni.uniAddress}}</td>
-
+              <tr ng-repeat="lecture in lectures | filter: searchText " ng-hide="lecture.logicalDelete" >
+                <td ng-click="openLecture(lecture)">{{lecture.lectureDate | date}}</td>
+                <td ng-click="openLecture(lecture)">{{lecture.course.courseNum}}</td>
+                <td ng-click="openLecture(lecture)">{{lecture.course.courseName}}</td>
+                <td ng-click="openLecture(lecture)">{{lecture.lectureNum}}</td>
+                <td ng-click="openLecture(lecture)">{{lecture.lectureTitle}}</td>
+                <td ng-click="openLecture(lecture)">{{lecture.about}}</td>
+                <td ng-click="openLecture(lecture)">{{lecture.course.uni.uniName}}</td>
+                <td ng-click="openLecture(lecture)">{{lecture.course.uni.uniAddress}}</td>
+                <td>
+                  <button type="button" class="btn btn-light btn-sm" id="DelBtn" ng-click="lecture.logicalDelete = true;">Delete</button>
+                </td>
               </tr>
-
             </table>
           </div>
         </div>

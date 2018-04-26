@@ -21,6 +21,10 @@ moviesApp.controller("mainLectureDetailsCtrl", function ($scope, $routeParams, l
         $scope.movies = movieService.movies;
     });
 
+    console.log("$scope.movies:");
+    console.log($scope.movies);
+    
+    
     // filmCuts Constructor 
     function FilmCut(movie, filmTheme, filmCutStartHours, filmCutStartMinutes, filmCutStartSeconds, filmCutEndHours, filmCutEndMinutes, filmCutEndSeconds) {
         this.filmName = movie.name;
@@ -44,5 +48,9 @@ moviesApp.controller("mainLectureDetailsCtrl", function ($scope, $routeParams, l
         newFilmCut.serialNum = val + 1;
         $scope.lecture.filmCuts.push(newFilmCut);
     };
+
+
+   
+
 
     });

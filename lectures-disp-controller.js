@@ -1,4 +1,10 @@
-moviesApp.controller("lecturesDispCtrl", function ($scope, activeUserService, $location, lectureService, courseService) {
+moviesApp.controller("lecturesDispCtrl", function ($scope, $rootScope, activeUserService, $location, lectureService, courseService) {
+
+  $scope.isLoaded = false;
+  $rootScope.$on('$includeContentLoaded', function (event) {
+    $scope.isLoaded = true;
+  });
+
 
   // console.log("lectures Disp controller");
   // // This is an authotization check. If the user is not logged going back to the home screen

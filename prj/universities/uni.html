@@ -39,7 +39,7 @@
                     <div class="container">
                         <div>
                             <label for="search">Filter:</label>
-                            <input type="text" class+"form-control-sm"  id="search" ng-model="searchText">
+                            <input type="text" class+ "form-control-sm" id="search" ng-model="searchText">
                         </div>
                         <hr>
                         <table id="unis-tab" class=" table table-condensed">
@@ -48,10 +48,14 @@
                                 <th ng-click="changeSort('uniName')">Name</th>
                                 <th ng-click="changeSort('uniAddress')">Address</th>
                             </tr>
-                            <tr ng-repeat="uni in universities | filter: searchText | orderBy: sortProp : false" ng-click="openUni(uni) ">
+                            <tr ng-repeat="uni in universities | filter: searchText | orderBy: sortProp : false" ng-hide="uni.logicalDelete"  ">
                                 <td>{{uni.serialNum}}</td>
                                 <td>{{uni.uniName}}</td>
                                 <td>{{uni.uniAddress}}</td>
+                                <td>
+                                    <button type="button" class="btn btn-light btn-sm" id="DelBtn" ng-click="uni.logicalDelete = true;">Delete</button>
+                                </td>
+                            </tr>
                         </table>
                     </div>
                 </div>

@@ -69,20 +69,12 @@ moviesApp.controller("lecturesCtrl", function ($scope, activeUserService, $locat
 
 
   $scope.addFormLecture = function (lectureTitle, lectureNum, lectureDate, about, course) {
-    console.log("course:");
-    console.log(course);
-    console.log("Before :");
-    console.log($scope.lectures);
     var indx;
     indx = $scope.lectures.length - 1;
     var val;
     val = $scope.lectures[indx].serialNum;
     var newFormLecture = new formLecture(lectureTitle, lectureNum, lectureDate, about, course);
-    console.log("var newLecture:");
-    console.log(newFormLecture);
     newFormLecture.serialNum = val + 1;
-    console.log("After lectures:");
-    console.log($scope.lectures);
     $scope.lectures.push(newFormLecture);
   };
 
